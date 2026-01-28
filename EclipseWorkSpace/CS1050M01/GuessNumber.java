@@ -30,16 +30,21 @@ public class GuessNumber
 		{
 
 			System.out.print("\nEnter your guess: ");
-			// assigns guess as int
+			// assigns guess as inputed integer
 			guess = keyboardInput.nextInt();
-
+			// after guess is assigned...
 			if (guess == number)
 			{
+				// if you guess correctly this string is run
 				System.out.println("Yes, the number is " + number);
-			} else if (guess > number)
+			}
+			// if the guess is too high
+			else if (guess > number)
 			{
 				System.out.println("Your guess is too high");
-			} else
+			}
+			// if the guess is too low/otherwise
+			else
 			{
 				System.out.println("Your guess is too low");
 			}
