@@ -15,6 +15,9 @@ public class GEM01GradeCalculations
 		final double PROJECTS = 0.2;
 		final double FINAL_DEMO = 0.2;
 
+		// grades
+		double classPart = 95;
+
 	}// end of main
 
 }// end of class
