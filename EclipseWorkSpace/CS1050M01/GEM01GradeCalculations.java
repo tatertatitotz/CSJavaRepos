@@ -6,13 +6,14 @@
  */
 public class GEM01GradeCalculations
 {
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
+		// constant weights
+		final double CLASS_PART = 0.15;
+		final double GUIDED_EX = 0.2;
+		final double QUIZZES = 0.25;
+		final double PROJECTS = 0.2;
+		final double FINAL_DEMO = 0.2;
 
 	}// end of main
 
