@@ -17,6 +17,10 @@ public class GEM01GradeCalculations
 
 		// grades
 		double classPart = 95;
+		double guidedEx = 92;
+		double quizzes = 88;
+		double projects = 87;
+		double finalDemo = 93;
 
 		double totalPart = CLASS_PART * classPart;
 
