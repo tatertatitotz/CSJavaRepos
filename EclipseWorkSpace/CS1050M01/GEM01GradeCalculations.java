@@ -22,13 +22,19 @@ public class GEM01GradeCalculations
 		double projects = 87;
 		double finalDemo = 93;
 
+		// weights * grades of the same name
 		double totalPart = CLASS_PART * classPart;
 		double totalGuided = GUIDED_EX * guidedEx;
 		double totalQuizzes = QUIZZES * quizzes;
 		double totalProjects = PROJECTS * projects;
 		double totalFinalDem = FINAL_DEMO * finalDemo;
 
+		// testing results
 		System.out.println(totalPart);
+		System.out.println(totalGuided);
+		System.out.println(totalQuizzes);
+		System.out.println(totalProjects);
+		System.out.println(totalFinalDem);
 
 	}// end of main
 
