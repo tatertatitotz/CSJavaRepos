@@ -18,6 +18,10 @@ public class GEM01GradeCalculations
 		// grades
 		double classPart = 95;
 
+		double totalPart = CLASS_PART * classPart;
+
+		System.out.println(totalPart);
+
 	}// end of main
 
 }// end of class
