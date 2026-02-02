@@ -40,12 +40,13 @@ public class GEM01GradeCalculations
 		// final algorithm step
 		double grade = totalPart + totalGuided + totalQuizzes + totalProjects + totalFinalDem;
 
-		// testing results
-		System.out.println(totalPart);
-		System.out.println(totalGuided);
-		System.out.println(totalQuizzes);
-		System.out.println(totalProjects);
-		System.out.println(totalFinalDem);
+		// testing results for each weighted grade
+
+		// System.out.println(totalPart);
+		// System.out.println(totalGuided);
+		// System.out.println(totalQuizzes);
+		// System.out.println(totalProjects);
+		// System.out.println(totalFinalDem);
 
 		// test output
 		System.out.println("Your final grade is:" + grade);
