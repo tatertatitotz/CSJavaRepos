@@ -23,6 +23,10 @@ public class GEM01GradeCalculations
 		double finalDemo = 93;
 
 		double totalPart = CLASS_PART * classPart;
+		double totalGuided = GUIDED_EX * guidedEx;
+		double totalQuizzes = QUIZZES * quizzes;
+		double totalProjects = PROJECTS * projects;
+		double totalFinalDem = FINAL_DEMO * finalDemo;
 
 		System.out.println(totalPart);
 
