@@ -1,3 +1,4 @@
+
 /**
  * Calculate the BMI using formula in US units. 
  * User will enter weight in pounds and height in inches
@@ -10,17 +11,17 @@ public class BodyMassIndexActivity
 
 	public static void main(String[] args)
 	{
-		//Create constant an variables
+		// Create constant an variables
 		int BMI_US_FACTOR = 703;
-		 // factor formula in pounds
+		// factor formula in pounds
 		// Variables
-		//declared weight
+		// declared weight
 		double weight;
-		//declared height;
+		// declared height;
 		double height;
-		 // The user's BMI
+		// The user's BMI
 
-		// Create a Scanner object for scanning input from keyboard
+		Scanner keyboardInput = new Scanner(System.in);
 
 		// Tell the user what the program will do.
 		System.out.println("This program will calculate your " + "body mass index, or BMI.");
