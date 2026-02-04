@@ -3,14 +3,14 @@
  * User will enter weight in pounds and height in inches
  */
 
-// ADD CODE to import Scanner class
+import java.util.Scanner;
 
 public class BodyMassIndexActivity
 {
 
 	public static void main(String[] args)
 	{
-		//Create constand an variables
+		//Create constant an variables
 		// constants
 		 // factor formula in pounds
 		// Variables
