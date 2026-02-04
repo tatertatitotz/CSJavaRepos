@@ -41,3 +41,5 @@ public class BodyMassIndexActivity
 		System.out.printf("Your body mass index (BMI) is %f", bmi);
 
 		keyboardInput.close();
+	}// end of main
+}// end of class
