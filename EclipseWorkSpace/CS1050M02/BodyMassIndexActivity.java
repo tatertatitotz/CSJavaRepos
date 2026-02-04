@@ -28,11 +28,11 @@ public class BodyMassIndexActivity
 
 		// Get the user's weight.
 		System.out.print("Enter your weight, in pounds: ");
-		// ADD CODE to input next double for weight
+		weight = keyboardInput.nextDouble();
 
 		// Get the user's height.
 		System.out.print("Enter your height, in inches: ");
-		// ADD CODE input next double for height
+		height = keyboardInput.nextDouble();
 
 		// Calculate the user's body mass index.
 		double bmi = weight * BMI_US_FACTOR / (height * height);
