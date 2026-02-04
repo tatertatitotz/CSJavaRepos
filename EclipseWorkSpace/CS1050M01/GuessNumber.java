@@ -50,5 +50,7 @@ public class GuessNumber
 			}
 		}
 
+		keyboardInput.close();
+
 	}// end of main
 }// end of class
