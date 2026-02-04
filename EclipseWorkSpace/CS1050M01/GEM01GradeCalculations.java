@@ -49,7 +49,7 @@ public class GEM01GradeCalculations
 		// System.out.println(totalFinalDem);
 
 		// test output
-		System.out.println("Your final grade is:" + grade);
+		System.out.println("Your final grade is: " + grade);
 
 	}// end of main
 
