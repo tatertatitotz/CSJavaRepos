@@ -11,7 +11,7 @@ public class BodyMassIndexActivity
 	public static void main(String[] args)
 	{
 		//Create constant an variables
-		// constants
+		int BMI_US_FACTOR = 703;
 		 // factor formula in pounds
 		// Variables
 		// The user's weight
