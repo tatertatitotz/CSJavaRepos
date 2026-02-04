@@ -35,7 +35,7 @@ public class BodyMassIndexActivity
 		// ADD CODE input next double for height
 
 		// Calculate the user's body mass index.
-		bmi = weight * BMI_US_FACTOR / (height * height);
+		double bmi = weight * BMI_US_FACTOR / (height * height);
 
 		// Display the user's BMI.
 		System.out.printf("Your body mass index (BMI) is %f", bmi);
