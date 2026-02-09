@@ -40,6 +40,8 @@ public class L06MathCharsStrings
 		System.out.print("What is your first name?: ");
 		String name1 = keyboardInput.next();
 		System.out.print("What is your last name?: ");
+		char lastInitial = keyboardInput.next().charAt(0);
+
 	}
 
 }
