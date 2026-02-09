@@ -37,6 +37,8 @@ public class L06MathCharsStrings
 		char firstInitial = firstName.charAt(3);
 		// -------- practice -------------------
 		Scanner keyboardInput = new Scanner(System.in);
+		System.out.print("What is your first name?: ");
+		System.out.print("What is your last name?: ");
 	}
 
 }
