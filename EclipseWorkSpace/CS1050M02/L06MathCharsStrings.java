@@ -1,16 +1,9 @@
-/**
- * 
- */
 
-/**
- * 
- */
+import java.util.Scanner;
+
 public class L06MathCharsStrings
 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args)
 	{
 		// What is happening for each line?
