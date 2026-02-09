@@ -7,14 +7,18 @@ public class PrintMethodTesting
 	 */
 	public static void main(String[] args)
 	{
-		double age = 10.5;
-		double name = 7;
+		// int age = 10;
+		// System.out.print("hello");
 
-		System.out.print("hello");
+		// System.out.printf("My age is %d", age);
 
-		System.out.printf("My age is %d and my name is %d", age, name);
+		// possible mistake
+		double testOne = 6 * 9 ^ 2;
+		System.out.println("6 * 9 ^ 2 = " + testOne);
 
-		System.out.println("hello");
+		// intended result
+		double testTwo = (6 * 9) ^ 2;
+		System.out.print("(6 * 9)^ 2 = " + testTwo);
 	}
 
 }
