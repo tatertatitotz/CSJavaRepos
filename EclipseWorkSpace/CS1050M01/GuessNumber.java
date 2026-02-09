@@ -18,6 +18,7 @@ public class GuessNumber
 		 */
 		int number = (int) (Math.random() * RANDOM_MULTIPLIER) + 1;
 
+		// Scanning for internal inputs from
 		Scanner keyboardInput = new Scanner(System.in);
 
 		System.out.println("Guess a magic number between 0 and 100");
@@ -49,7 +50,7 @@ public class GuessNumber
 				System.out.println("Your guess is too low");
 			}
 		}
-
+		// closing a the Scanner for efficiency
 		keyboardInput.close();
 
 	}// end of main
