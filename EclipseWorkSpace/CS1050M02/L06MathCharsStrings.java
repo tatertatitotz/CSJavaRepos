@@ -13,6 +13,10 @@ public class L06MathCharsStrings
 	 */
 	public static void main(String[] args)
 	{
+		double randomDouble = Math.random();
+		int randomInt = (int) Math.random();
+		randomInt = (int) (Math.random() * 10);
+		randomInt = (int) (Math.random() * 10 + 1);
 
 	}
 
