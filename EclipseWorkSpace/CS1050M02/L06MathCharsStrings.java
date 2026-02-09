@@ -23,6 +23,11 @@ public class L06MathCharsStrings
 		randomInt = (int) (Math.random() * 10 + 1);
 
 		// -------- char -------------------
+		char charTest = 'a';
+		int charAsciiValue = (int) charTest;
+		String firstName = "Heriberto";
+		int stringLength = firstName.length();
+		char firstInitial = firstName.charAt(3);
 	}
 
 }
