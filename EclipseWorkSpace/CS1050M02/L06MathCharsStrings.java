@@ -35,6 +35,8 @@ public class L06MathCharsStrings
 		int stringLength = firstName.length();
 		// points at individual chars at an assigned
 		char firstInitial = firstName.charAt(3);
+		// -------- practice -------------------
+		Scanner keyboardInput = new Scanner(System.in);
 	}
 
 }
