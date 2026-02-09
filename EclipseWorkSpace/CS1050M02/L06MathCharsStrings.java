@@ -23,10 +23,17 @@ public class L06MathCharsStrings
 		randomInt = (int) (Math.random() * 10 + 1);
 
 		// -------- char -------------------
+
+		// declares and initializes charTest as character 'a'
 		char charTest = 'a';
+		// declares and initializes charAsciiValue as the AsciiValue of charTest
 		int charAsciiValue = (int) charTest;
+		// declares and initializes firstName as a String "Heriberto"
 		String firstName = "Heriberto";
+
+		// measures the # of chars in a String
 		int stringLength = firstName.length();
+		// points at individual chars at an assigned
 		char firstInitial = firstName.charAt(3);
 	}
 
