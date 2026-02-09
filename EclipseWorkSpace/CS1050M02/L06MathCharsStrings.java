@@ -6,6 +6,7 @@ public class L06MathCharsStrings
 
 	public static void main(String[] args)
 	{
+		// ------- Math --------------------
 		// What is happening for each line?
 		// creates a random double
 		double randomDouble = Math.random();
@@ -21,6 +22,7 @@ public class L06MathCharsStrings
 		// creates a single digit number between 1 =< x < 10
 		randomInt = (int) (Math.random() * 10 + 1);
 
+		// -------- char -------------------
 	}
 
 }
