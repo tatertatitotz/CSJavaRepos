@@ -25,7 +25,6 @@ public class BodyMassIndexActivity
 
 		// Tell the user what the program will do.
 		System.out.println("This program will calculate your " + "body mass index, or BMI.");
-
 		// Get the user's weight.
 		System.out.print("Enter your weight, in pounds: ");
 		weight = keyboardInput.nextDouble();
