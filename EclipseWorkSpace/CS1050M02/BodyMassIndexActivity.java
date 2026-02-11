@@ -37,6 +37,21 @@ public class BodyMassIndexActivity
 		double bmi = weight * BMI_US_FACTOR / (height * height);
 		double bmi = weight * BMI_US_FACTOR / (Math.pow(height, 2));
 
+		// ---- BMI Categories ----
+		if (bmi >= 40)
+		{
+			System.out.println("Obese");
+		} else if (bmi >= 25)
+		{
+			System.out.println("Overweight");
+		} else if (bmi >= 18.5)
+		{
+			System.out.println("Normal");
+		} else
+		{
+			System.out.println("Underweight");
+		}
+
 		// Display the user's BMI.
 		System.out.printf("Your body mass index (BMI) is %f", bmi);
 
