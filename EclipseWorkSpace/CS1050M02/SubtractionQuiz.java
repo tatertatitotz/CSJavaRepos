@@ -13,11 +13,14 @@ public class SubtractionQuiz
 		// 2. If number1 < number2, swap number1 with number2
 		if (number1 < number2)
 		{
+			// declared and initialized
 			int temp = number1;
 			number1 = number2;
 			number2 = temp;
+			System.out.println("temp value is " + temp);
 		}
 
+		System.out.println("temp value is " + temp);
 		// 3. Prompt the student to answer "what is number1 – number2?"
 		System.out.print("What is " + number1 + " - " + number2 + "? ");
 		Scanner input = new Scanner(System.in);
