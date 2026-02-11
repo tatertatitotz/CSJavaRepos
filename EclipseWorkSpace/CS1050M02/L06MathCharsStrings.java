@@ -36,6 +36,9 @@ public class L06MathCharsStrings
 		// points at individual chars at an assigned
 		char firstInitial = firstName.charAt(3);
 
+		System.out.println("length of the String: " + stringLength);
+		System.out.println("fourth letter: " + firstInitial);
+
 		// -------- practice -------------------
 
 		// keyboardInput is the identifier for running the Scanner method
