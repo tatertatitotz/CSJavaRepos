@@ -7,17 +7,13 @@ public class PrintMethodTesting
 	 */
 	public static void main(String[] args)
 	{
-		int age = 10;
+		char charTest= 'a';
+		int charAsciiValue= (int)charTest;
+		String firstName = "Heriberto";
 
-		System.out.printf("My age is %d", age);
+		System.out.printf("char: %c ascii value: %d \n", charTest, charAsciiValue);
+		System.out.println("Hello " + firstName);
 
-		// possible mistake
-		double testOne = 6 * 9 ^ 2;
-		System.out.println("6 * 9 ^ 2 = " + testOne);
-
-		// intended result
-		double testTwo = (6 * 9) ^ 2;
-		System.out.print("(6 * 9)^ 2 = " + testTwo);
 	}
 
 }
