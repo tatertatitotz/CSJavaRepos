@@ -63,14 +63,15 @@ public class L06MathCharsStrings
 
 		Scanner madLibInput = new Scanner(System.in);
 
+		String firstNameMadLib = madLibInput.next();
 
-		keyboardInput.close();
 //		lastName
 //		noun
 //		verb
 //		adjective
 //		place
 
+		System.out.print(firstNameMadLib);
 
 	}
 
