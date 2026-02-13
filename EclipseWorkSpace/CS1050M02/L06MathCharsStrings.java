@@ -57,6 +57,8 @@ public class L06MathCharsStrings
 		// Displays a Hello message with all given inputs
 		System.out.print("Hello " + name1 + " " + lastInitial + "!");
 
+		keyboardInput.close();
+
 	}
 
 }
