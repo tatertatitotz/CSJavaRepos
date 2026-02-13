@@ -61,24 +61,39 @@ public class L06MathCharsStrings
 
 		// -------- Mad Lib ---------------------
 
+		// Added a scanner to detect keyboard inputs in the console
 		Scanner madLibInput = new Scanner(System.in);
 
+		// Asking a question to display in console
 		System.out.print("What is your first name?: ");
+		// declared and initialized firstNameMadLib as the next String detected by
+		// madLibInput
 		String firstNameMadLib = madLibInput.next();
 
 		System.out.print("What is your last names?: ");
+		// Asking a question to display in console
+		// declared and initialized lastName as the next String detected by madLibInput
 		String lastName = madLibInput.next();
 
+		// Asking a question to display in console
 		System.out.print("Enter a noun: ");
+		// declared and initialized noun as the next String detected by madLibInput
 		String noun = madLibInput.next();
 
+		// Asking a question to display in console
 		System.out.print("Enter a verb: ");
+		// declared and initialized verb as the next String detected by madLibInput
 		String verb = madLibInput.next();
 
+		// Asking a question to display in console
 		System.out.print("Enter an Adjective: ");
+		// declared and initialized adjective as the next String detected by madLibInput
 		String adjective = madLibInput.next();
 
 		System.out.print("Enter a place");
+		// Asking a question to display in console
+		// declared and initialized firstNameMadLib as the next String detected by
+		// madLibInput
 		String place = madLibInput.next();
 
 	}
