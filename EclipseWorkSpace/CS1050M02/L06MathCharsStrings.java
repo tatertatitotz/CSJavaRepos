@@ -108,7 +108,7 @@ public class L06MathCharsStrings
 		// Adds all the variables together!
 		// Don't forget to add spaces between everything.
 		System.out.print(firstNameMadLib + "" + lastName + " was at " + place + " and " + verb + " with a " + adjective
-				+ " " + noun + " and then " + firstNameMadLib + " couldn't help but think: " + favoriteLetter
+				+ " " + noun + ". " + firstNameMadLib + " couldn't help but think: " + favoriteLetter
 				+ " is my favorite letter.");
 	}
 
