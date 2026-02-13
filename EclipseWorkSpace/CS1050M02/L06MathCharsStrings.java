@@ -64,6 +64,11 @@ public class L06MathCharsStrings
 		// Added a scanner to detect keyboard inputs in the console
 		Scanner madLibInput = new Scanner(System.in);
 
+		// Disclaimer because next() ends its function at a space
+		System.out.print("Please provide one word answers only!");
+
+		// This section is declaring and initializing variables
+
 		// Asking a question to display in console
 		System.out.print("What is your first name?: ");
 		// declared and initialized firstNameMadLib as the next String detected by
