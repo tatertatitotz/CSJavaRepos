@@ -70,8 +70,8 @@ public class L06MathCharsStrings
 		// madLibInput
 		String firstNameMadLib = madLibInput.next();
 
-		System.out.print("What is your last names?: ");
 		// Asking a question to display in console
+		System.out.print("What is your last name?: ");
 		// declared and initialized lastName as the next String detected by madLibInput
 		String lastName = madLibInput.next();
 
@@ -90,8 +90,8 @@ public class L06MathCharsStrings
 		// declared and initialized adjective as the next String detected by madLibInput
 		String adjective = madLibInput.next();
 
-		System.out.print("Enter a place");
 		// Asking a question to display in console
+		System.out.print("Enter a place: ");
 		// declared and initialized firstNameMadLib as the next String detected by
 		// madLibInput
 		String place = madLibInput.next();
