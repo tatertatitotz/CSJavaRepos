@@ -97,6 +97,8 @@ public class L06MathCharsStrings
 		String place = madLibInput.next();
 
 		System.out.print("What is your favorite letter?: ");
+		// declared and initialized favoriteLetter as the first character detected by
+		// madLibInput
 		char favoriteLetter = madLibInput.next().charAt(0);
 	}
 
