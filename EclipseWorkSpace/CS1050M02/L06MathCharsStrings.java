@@ -79,6 +79,10 @@ public class L06MathCharsStrings
 
 		System.out.print("Enter an Adjective: ");
 		String adjective = madLibInput.next();
+
+		System.out.print("Enter a place");
+		String place = madLibInput.next();
+
 	}
 
 }
