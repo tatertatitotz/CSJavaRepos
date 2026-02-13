@@ -76,6 +76,9 @@ public class L06MathCharsStrings
 
 		System.out.print("Enter a verb: ");
 		String verb = madLibInput.next();
+
+		System.out.print("Enter an Adjective: ");
+		String adjective = madLibInput.next();
 	}
 
 }
