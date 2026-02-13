@@ -66,7 +66,6 @@ public class L06MathCharsStrings
 		System.out.print("What is your first name?: ");
 		String firstNameMadLib = madLibInput.next();
 
-//		verb
 //		adjective
 //		place
 		System.out.print("What is your last names?: ");
@@ -75,6 +74,8 @@ public class L06MathCharsStrings
 		System.out.print("Enter a noun: ");
 		String noun = madLibInput.next();
 
+		System.out.print("Enter a verb: ");
+		String verb = madLibInput.next();
 	}
 
 }
