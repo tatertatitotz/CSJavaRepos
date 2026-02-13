@@ -72,8 +72,11 @@ public class L06MathCharsStrings
 
 		// Asking a question to display in console
 		System.out.print("What is your last name?: ");
-		// declared and initialized lastName as the first character detected by
-		// madLibInput
+		/*
+		 * declared and initialized lastName as the first character detected by
+		 * madLibInput Because of charAt(0); even if a string is typed, it will take the
+		 * first letter or in this case, last name initial.
+		 */
 		char lastName = madLibInput.next().charAt(0);
 
 		// Asking a question to display in console
