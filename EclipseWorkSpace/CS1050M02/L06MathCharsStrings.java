@@ -72,8 +72,9 @@ public class L06MathCharsStrings
 
 		// Asking a question to display in console
 		System.out.print("What is your last name?: ");
-		// declared and initialized lastName as the next String detected by madLibInput
-		String lastName = madLibInput.next();
+		// declared and initialized lastName as the first character detected by
+		// madLibInput
+		char lastName = madLibInput.next().charAt(0);
 
 		// Asking a question to display in console
 		System.out.print("Enter a noun: ");
