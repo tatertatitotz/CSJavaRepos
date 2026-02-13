@@ -63,6 +63,7 @@ public class L06MathCharsStrings
 
 		Scanner madLibInput = new Scanner(System.in);
 
+		System.out.print("What is your first name?: ");
 		String firstNameMadLib = madLibInput.next();
 
 //		lastName
