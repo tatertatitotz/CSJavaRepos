@@ -66,8 +66,6 @@ public class L06MathCharsStrings
 		System.out.print("What is your first name?: ");
 		String firstNameMadLib = madLibInput.next();
 
-//		adjective
-//		place
 		System.out.print("What is your last names?: ");
 		String lastName = madLibInput.next();
 
