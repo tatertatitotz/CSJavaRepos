@@ -59,6 +59,10 @@ public class L06MathCharsStrings
 
 		keyboardInput.close();
 
+		// -------- Mad Lib ---------------------
+
+		Scanner madLibInput = new Scanner(System.in);
+
 	}
 
 }
