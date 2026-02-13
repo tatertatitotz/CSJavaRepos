@@ -34,7 +34,6 @@ public class BodyMassIndexActivity
 		height = keyboardInput.nextDouble();
 
 		// Calculate the user's body mass index.
-		double bmi = weight * BMI_US_FACTOR / (height * height);
 		double bmi = weight * BMI_US_FACTOR / (Math.pow(height, 2));
 
 		// ---- BMI Categories ----
