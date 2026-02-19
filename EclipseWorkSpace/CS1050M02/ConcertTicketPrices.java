@@ -10,7 +10,10 @@ public class ConcertTicketPrices
 		// Scanner
 		Scanner keyboardInput = new Scanner(System.in);
 
-		// variables
+		// declare variables
+		char section;
+		int row;
+		double price;
 
 		// initialize variables with scanner
 
