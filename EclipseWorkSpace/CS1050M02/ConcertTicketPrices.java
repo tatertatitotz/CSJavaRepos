@@ -1,10 +1,21 @@
+//create object Scanner
 
 public class ConcertTicketPrices
 {
 
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
+		// Scanner
+
+		// variables
+
+		// initialize variables with scanner
+
+		// section
+
+		// prices
+
+		// ConcertTicketPrices console displays
 
 	}
 
