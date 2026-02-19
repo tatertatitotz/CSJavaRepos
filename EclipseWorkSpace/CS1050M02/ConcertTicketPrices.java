@@ -18,8 +18,20 @@ public class ConcertTicketPrices
 		// initialize variables with scanner
 		System.out.print("Choose your section by typing: " + "\n F: Front Section \n C: Center Section "
 				+ "\n S: Side Section \n U: Upper Section" + "\n BEGIN HERE: ");
+		/*
+		 * initialize section. charAt(0) forces section to become a char even if a
+		 * String is inputed. Character.toUpperCase forces section to be stored as the
+		 * upper case version of the char.
+		 */
+		section = Character.toUpperCase(keyboardInput.next().charAt(0));
 
-		// section
+		if (section != 'F' || 'C' || 'S' || 'U')
+			;
+		{
+
+		}
+
+		// initialize row
 
 		// prices
 
