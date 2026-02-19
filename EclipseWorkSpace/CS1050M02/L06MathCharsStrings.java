@@ -63,7 +63,7 @@ public class L06MathCharsStrings
 		Scanner madLibInput = new Scanner(System.in);
 
 		// Disclaimer because next() ends its function at a space
-		System.out.print("Please provide one word answers only!");
+		System.out.println("Please provide one word answers only!");
 
 		// This section is declaring and initializing variables
 
@@ -110,7 +110,7 @@ public class L06MathCharsStrings
 
 		// Adds all the variables together!
 		// Don't forget to add spaces between everything.
-		System.out.print(firstNameMadLib + "" + lastName + " was at " + place + " and " + verb + " with a " + adjective
+		System.out.print(firstNameMadLib + " " + lastName + " was at " + place + " and " + verb + " with a " + adjective
 				+ " " + noun + ". " + firstNameMadLib + " couldn't help but think: " + favoriteLetter
 				+ " is my favorite letter.");
 	}
