@@ -42,22 +42,20 @@ public class L06MathCharsStrings
 		// -------- practice -------------------
 
 		// keyboardInput is the identifier for running the Scanner method
-//		Scanner keyboardInput = new Scanner(System.in);
-//
-//		// console display for user
-//		System.out.print("What is your first name?: ");
-//		// declares and initializes name1 as the input given from the Scanner
-//		String name1 = keyboardInput.next();
-//
-//		// console display for user
-//		System.out.print("What is your last name?: ");
-//		// declares and initializes lastIntial
-//		char lastInitial = keyboardInput.next().charAt(0);
-//
-//		// Displays a Hello message with all given inputs
-//		System.out.print("Hello " + name1 + " " + lastInitial + "!");
-//
-//		keyboardInput.close();
+		Scanner keyboardInput = new Scanner(System.in);
+
+		// console display for user
+		System.out.print("What is your first name?: ");
+		// declares and initializes name1 as the input given from the Scanner
+		String name1 = keyboardInput.next();
+
+		// console display for user
+		System.out.print("What is your last name?: ");
+		// declares and initializes lastIntial
+		char lastInitial = keyboardInput.next().charAt(0);
+
+		// Displays a Hello message with all given inputs
+		System.out.println("Hello " + name1 + " " + lastInitial + "!");
 
 		// -------- Mad Lib ---------------------
 
