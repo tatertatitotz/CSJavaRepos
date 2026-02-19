@@ -14,6 +14,7 @@ public class ConcertTicketPrices
 		char section;
 		int row;
 		double price;
+		String sectionName;
 
 		// initialize variables with scanner
 		System.out.print("Choose your section by typing: " + "\n F: Front Section \n C: Center Section "
@@ -29,19 +30,19 @@ public class ConcertTicketPrices
 		{
 		case 'F':
 		{
-			String sectionName = "Front Section";
+			sectionName = "Front Section";
 		}
 		case 'C':
 		{
-			String sectionName = "Center Section";
+			sectionName = "Center Section";
 		}
 		case 'S':
 		{
-			String sectionName = "Side Section";
+			sectionName = "Side Section";
 		}
 		case 'U':
 		{
-			String sectionName = "Upper Section";
+			sectionName = "Upper Section";
 			break;
 		}
 		default:
