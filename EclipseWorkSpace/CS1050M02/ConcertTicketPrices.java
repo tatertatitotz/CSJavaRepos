@@ -32,7 +32,6 @@ public class ConcertTicketPrices
 		case 'S':
 		case 'U':
 		{
-			System.out.print("Moving through the stack");
 			break;
 		}
 		default:
