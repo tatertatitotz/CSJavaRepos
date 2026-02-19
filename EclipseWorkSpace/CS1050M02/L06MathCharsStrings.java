@@ -59,8 +59,7 @@ public class L06MathCharsStrings
 
 		// -------- Mad Lib ---------------------
 
-		// Added a scanner to detect keyboard inputs in the console
-		Scanner madLibInput = new Scanner(System.in);
+		// Added a scanner keyboardInput already added above at line 45
 
 		// Disclaimer because next() ends its function at a space
 		System.out.println("Please provide one word answers only!");
@@ -69,50 +68,64 @@ public class L06MathCharsStrings
 
 		// Asking a question to display in console
 		System.out.print("What is your first name?: ");
-		// declared and initialized firstNameMadLib as the next String detected by
-		// madLibInput
-		String firstNameMadLib = madLibInput.next();
+		/*
+		 * declared and initialized firstNameMadLib as the next String detected by
+		 * madLibInput. Strings are concatenated (or series of) chars. When you are
+		 * spelling, you are concatenating by putting the letters in a certain order.
+		 * 
+		 * You can initialize a char as a string, but you cannot declare a String as a
+		 * char.
+		 */
+		String firstNameMadLib = keyboardInput.next();
 
 		// Asking a question to display in console
 		System.out.print("What is your last name?: ");
 		/*
 		 * declared and initialized lastName as the first character detected by
-		 * madLibInput Because of charAt(0); even if a string is typed, it will take the
-		 * first letter or in this case, last name initial.
+		 * madLibInput. charAt(0) means that the first char in the string is going to be
+		 * read.
 		 */
-		char lastName = madLibInput.next().charAt(0);
+		char lastName = keyboardInput.next().charAt(0);
 
 		// Asking a question to display in console
 		System.out.print("Enter a noun: ");
-		// declared and initialized noun as the next String detected by madLibInput
-		String noun = madLibInput.next();
+		/*
+		 * When reading a String, the method next() reads the concatenated chars until
+		 * it reads a space. A space ends the method.
+		 */
+		String noun = keyboardInput.next();
 
 		// Asking a question to display in console
 		System.out.print("Enter a verb: ");
 		// declared and initialized verb as the next String detected by madLibInput
-		String verb = madLibInput.next();
+		String verb = keyboardInput.next();
 
 		// Asking a question to display in console
 		System.out.print("Enter an Adjective: ");
 		// declared and initialized adjective as the next String detected by madLibInput
-		String adjective = madLibInput.next();
+		String adjective = keyboardInput.next();
 
 		// Asking a question to display in console
 		System.out.print("Enter a place: ");
 		// declared and initialized firstNameMadLib as the next String detected by
 		// madLibInput
-		String place = madLibInput.next();
+		String place = keyboardInput.next();
 
 		System.out.print("What is your favorite letter?: ");
-		// declared and initialized favoriteLetter as the first character detected by
-		// madLibInput
-		char favoriteLetter = madLibInput.next().charAt(0);
+		/*
+		 * declared and initialized favoriteLetter as the first character detected by
+		 * madLibInput.
+		 * 
+		 */
+		char favoriteLetter = keyboardInput.next().charAt(0);
 
 		// Adds all the variables together!
 		// Don't forget to add spaces between everything.
 		System.out.print(firstNameMadLib + " " + lastName + " was at " + place + " and " + verb + " with a " + adjective
 				+ " " + noun + ". " + firstNameMadLib + " couldn't help but think: " + favoriteLetter
 				+ " is my favorite letter.");
+
+		keyboardInput.close();
 	}
 
 }
