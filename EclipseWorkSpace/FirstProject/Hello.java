@@ -50,11 +50,11 @@ public class Hello
 		}
 		default:
 		{
-			System.out.print("This sure is a 1");
+			System.out.print("What is this <:'O");
 			break;
 		}
 
-		}
+		}// end switch
 
 	}// end main
 
