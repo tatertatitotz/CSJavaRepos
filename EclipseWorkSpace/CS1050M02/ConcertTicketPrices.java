@@ -28,10 +28,20 @@ public class ConcertTicketPrices
 		switch (section)
 		{
 		case 'F':
+		{
+			String sectionName = "Front Section";
+		}
 		case 'C':
+		{
+			String sectionName = "Center Section";
+		}
 		case 'S':
+		{
+			String sectionName = "Side Section";
+		}
 		case 'U':
 		{
+			String sectionName = "Upper Section";
 			break;
 		}
 		default:
@@ -45,6 +55,7 @@ public class ConcertTicketPrices
 		// prices
 
 		// ConcertTicketPrices console displays
+		System.out.print("Selected" + sectionName);
 
 	}
 
