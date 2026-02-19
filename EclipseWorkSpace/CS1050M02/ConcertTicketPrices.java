@@ -16,6 +16,8 @@ public class ConcertTicketPrices
 		double price;
 
 		// initialize variables with scanner
+		System.out.print("Choose your section by typing: " + "\n F: Front Section \n C: Center Section "
+				+ "\n S: Side Section \n U: Upper Section" + "\n BEGIN HERE: ");
 
 		// section
 
