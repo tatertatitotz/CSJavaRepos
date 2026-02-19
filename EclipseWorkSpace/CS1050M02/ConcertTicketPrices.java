@@ -25,8 +25,17 @@ public class ConcertTicketPrices
 		 */
 		section = Character.toUpperCase(keyboardInput.next().charAt(0));
 
-		if (section != 'F' || section != 'C' || section != 'S' || section != 'U')
-			;
+		switch (section)
+		{
+		case 'F':
+		case 'C':
+		case 'S':
+		case 'U':
+		{
+			System.out.print("Moving through the stack");
+			break;
+		}
+		default:
 		{
 			System.out.print("Invalid section,  program ending");
 			return;
