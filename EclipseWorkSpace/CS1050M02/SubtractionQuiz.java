@@ -20,7 +20,6 @@ public class SubtractionQuiz
 			System.out.println("temp value is " + temp);
 		}
 
-		System.out.println("temp value is " + temp);
 		// 3. Prompt the student to answer "what is number1 – number2?"
 		System.out.print("What is " + number1 + " - " + number2 + "? ");
 		Scanner input = new Scanner(System.in);
