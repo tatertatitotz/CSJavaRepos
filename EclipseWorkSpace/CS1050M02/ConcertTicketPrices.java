@@ -56,7 +56,7 @@ public class ConcertTicketPrices
 		// prices
 
 		// ConcertTicketPrices console displays
-		System.out.print("Selected" + sectionName);
+		System.out.print("Selected " + sectionName);
 
 	}
 
