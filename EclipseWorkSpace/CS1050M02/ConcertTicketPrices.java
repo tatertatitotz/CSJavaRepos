@@ -31,14 +31,17 @@ public class ConcertTicketPrices
 		case 'F':
 		{
 			sectionName = "Front Section";
+			break;
 		}
 		case 'C':
 		{
 			sectionName = "Center Section";
+			break;
 		}
 		case 'S':
 		{
 			sectionName = "Side Section";
+			break;
 		}
 		case 'U':
 		{
@@ -51,6 +54,8 @@ public class ConcertTicketPrices
 			return;
 		}
 
+		}// end switch
+		System.out.println("Input ");
 		// initialize row
 
 		// prices
