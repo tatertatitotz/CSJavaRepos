@@ -60,10 +60,20 @@ public class ConcertTicketPrices
 		// initialize row
 		row = keyboardInput.nextInt();
 
-		if (row >= 1 && row <= 60)
+		if (row <= 60 && row >= 31)
 		{
+			System.out.print("$200");
 
-		} else
+		} else if (row <= 30 && row >= 16)
+		{
+			System.out.print("$300");
+
+		} else if (row <= 15 && row >= 1)
+		{
+			System.out.print("$450");
+		}
+
+		else
 		{
 			System.out.print("Invalid row, program ending");
 			return;
