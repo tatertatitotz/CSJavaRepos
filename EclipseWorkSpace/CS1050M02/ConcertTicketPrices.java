@@ -56,7 +56,9 @@ public class ConcertTicketPrices
 
 		}// end switch
 		System.out.println("Input ");
+		System.out.print("Input a row number between 1-60: ");
 		// initialize row
+		row = keyboardInput.nextInt();
 
 		// prices
 
