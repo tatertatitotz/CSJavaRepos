@@ -64,11 +64,11 @@ public class ConcertTicketPrices
 		{
 			System.out.print("$200");
 
-		} else if (row <= 30 && row >= 16)
+		} else if (row >= 16)
 		{
 			System.out.print("$300");
 
-		} else if (row <= 15 && row >= 1)
+		} else if (row >= 1)
 		{
 			System.out.print("$450");
 		}
