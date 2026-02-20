@@ -63,14 +63,17 @@ public class ConcertTicketPrices
 		if (row <= 60 && row >= 31)
 		{
 			System.out.print("$200");
+			price = 200;
 
 		} else if (row >= 16)
 		{
 			System.out.print("$300");
+			price = 300;
 
 		} else if (row >= 1)
 		{
 			System.out.print("$450");
+			price = 450;
 		}
 
 		else
