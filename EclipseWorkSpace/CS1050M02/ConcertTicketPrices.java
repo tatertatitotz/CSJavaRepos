@@ -64,11 +64,11 @@ public class ConcertTicketPrices
 		{
 			price = 200;
 
-		} else if (row >= 30 && row >= 16)
+		} else if (row <= 30 && row >= 16)
 		{
 			price = 300;
 
-		} else if (row >= 15 && row >= 1)
+		} else if (row <= 15 && row >= 1)
 		{
 			price = 450;
 		}
