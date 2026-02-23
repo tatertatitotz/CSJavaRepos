@@ -50,7 +50,7 @@ public class ConcertTicketPrices
 		}
 		default:
 		{
-			System.out.print("Invalid section,  program ending");
+			System.out.print("Invalid section, program ending");
 			return;
 		}
 
@@ -82,7 +82,7 @@ public class ConcertTicketPrices
 		// prices
 
 		// ConcertTicketPrices console displays
-		System.out.print("Selected " + sectionName);
+		System.out.print("Selected " + sectionName + ", row " + row + ", Price: $" + price);
 
 	}
 
