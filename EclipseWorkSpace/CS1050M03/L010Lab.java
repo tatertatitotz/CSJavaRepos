@@ -7,8 +7,16 @@ public class L010Lab
 	{
 		// creates a scanner called keyboardInput
 		Scanner keyboardInput = new Scanner(System.in);
+
+		// declares base
+		double base;
 		// declares exponent
 		int exponent;
+
+		// Prompt for base
+		System.out.print("Enter the base for your number: ");
+		// initializes base
+		base = keyboardInput.nextDouble();
 
 		// Prompt for input
 		System.out.print("Enter a positive number for an exponent: ");
