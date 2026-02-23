@@ -15,13 +15,18 @@ public class L010Lab
 		// initializes exponent
 		exponent = keyboardInput.nextInt();
 
+		// while the exponent is negative or 0 that will repeat until you give a
+		// positive
 		while (exponent <= 0)
 		{
+			// error message
 			System.out.println("Error: Exponent inputted is negative or zero.");
+			// prompted to input another exponent
 			System.out.print("Enter a positive number for an exponent: ");
 			exponent = keyboardInput.nextInt();
 		}
 
+		// output message
 		System.out.printf("The exponent is: %d", exponent);
 
 	}
