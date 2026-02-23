@@ -7,6 +7,8 @@ public class L010LabPart1
 	{
 		Scanner keyboardInput = new Scanner(System.in);
 		int exponent;
+			System.out.print("Enter a positive number for an exponent: ");
+			exponent = keyboardInput.nextInt();
 	}
 
 }
