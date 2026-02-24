@@ -56,6 +56,15 @@ public class Hello
 
 		}// end switch
 
+		int prefix = 5;
+
+		System.out.println(prefix);
+		System.out.println(--prefix);
+
+		int postfix = 3;
+		System.out.println(postfix--);
+		System.out.println(postfix);
+
 	}// end main
 
 }// end class
