@@ -19,6 +19,16 @@ public class DiceGame
 		{
 			System.out.print("You win!");
 		} else if (dice1 == 6 && dice2 == 6)
+		{
+			System.out.print("Jackpot!");
+		} else if (dice1 == dice2)
+		{
+			System.out.print("Doubles, you win!");
+		} else
+		{
+			System.out.print("You lose :(");
+		}
+
 	}
 
 }
