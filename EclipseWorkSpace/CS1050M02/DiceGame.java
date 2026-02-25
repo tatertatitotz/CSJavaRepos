@@ -15,16 +15,24 @@ public class DiceGame
 		int total = (dice1 + dice2);
 		System.out.println("You rolled: " + dice1 + " and " + dice2);
 
+		// if the sum of both dice is equal to 7 OR 11 you win
 		if (total == 7 || total == 11)
 		{
 			System.out.print("You win!");
-		} else if (dice1 == 6 && dice2 == 6)
+		}
+		// if both dice equal 6 it is a Jack pot
+		// this is put before the doubles because it reads it first in the stack
+		else if (dice1 == 6 && dice2 == 6)
 		{
 			System.out.print("Jackpot!");
-		} else if (dice1 == dice2)
+		}
+		// if both dice are equal
+		else if (dice1 == dice2)
 		{
 			System.out.print("Doubles, you win!");
-		} else
+		}
+		// any other values loses
+		else
 		{
 			System.out.print("You lose :(");
 		}
