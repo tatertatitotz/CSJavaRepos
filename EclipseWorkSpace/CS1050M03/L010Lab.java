@@ -39,6 +39,11 @@ public class L010Lab
 		// tells the user what their inputed exponent is.
 		System.out.println("The exponent is: " + exponent);
 
+		// declares and initializes baseMult
+		double baseMult = 0;
+
+		// assign baseMult as base to allow for it to store the original number
+		baseMult = base;
 	}
 
 }
