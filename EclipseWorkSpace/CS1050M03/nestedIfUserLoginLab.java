@@ -29,10 +29,31 @@ public class nestedIfUserLoginLab
 		// if user name is correct
 		if (USERNAME_ACTUAL.equals(inputedUsername))
 		{
+			// if both user name and password are correct
+			if (PASSWORD_ACTUAL.equals(inputedPassword))
+			{
+				System.out.print("Login successful!");
+			}
+			// if ONLY the USER NAME is correct
+			else
+			{
+				System.out.println("Incorrect password");
+			}
 		}
 		// if user name is incorrect
 		else
 		{
+			// if ONLY the password is correct
+			if (PASSWORD_ACTUAL.equals(inputedPassword))
+			{
+				System.out.println("Incorrect username");
+
+			}
+			// if BOTH are incorrect
+			else
+			{
+				System.out.print("Both username and password are incorrect. Login failed.");
+			}
 		}
 
 		keyboardInput.close();
