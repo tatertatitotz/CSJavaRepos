@@ -34,8 +34,6 @@ public class L010Lab
 			exponent = keyboardInput.nextInt();
 		}
 
-		// output message
-		System.out.printf("The exponent is: %d", exponent);
 		// tells the user what their inputed exponent is.
 		System.out.println("The exponent is: " + exponent);
 
@@ -44,6 +42,21 @@ public class L010Lab
 
 		// assign baseMult as base to allow for it to store the original number
 		baseMult = base;
+
+		/*
+		 * count begins at 1, because the exponent CANNOT be 0. As long as count is less
+		 * than the exponent, every time it loops, it will count up.zzz
+		 */
+		for (int count = 1; count < exponent; ++count)
+		{
+			// will multiply the base number by its original value until count is equal to
+			// exponent
+			base = base * baseMult;
+		}
+
+		// displays the equation and its answer.
+		System.out.print(baseMult + "^" + exponent + " = " + base);
+
 	}
 
 }
