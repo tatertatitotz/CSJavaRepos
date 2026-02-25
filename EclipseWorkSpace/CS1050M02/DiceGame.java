@@ -12,6 +12,8 @@ public class DiceGame
 		dice1 = (int) (Math.random() * 6 + 1);
 		dice2 = (int) (Math.random() * 6 + 1);
 
+		int total = (dice1 + dice2);
+		System.out.println("You rolled: " + dice1 + " and " + dice2);
 	}
 
 }
