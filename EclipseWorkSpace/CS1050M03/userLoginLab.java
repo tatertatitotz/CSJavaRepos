@@ -47,6 +47,7 @@ public class userLoginLab
 			System.out.print("Both username and password are incorrect. Login failed.");
 		}
 
+		keyboardInput.close();
 	}
 
 }
