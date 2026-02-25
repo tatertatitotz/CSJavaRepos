@@ -26,13 +26,25 @@ public class userLoginLab
 		System.out.print("Input password: ");
 		inputedPassword = keyboardInput.next();
 
-		// if both user name and password are correct then the login is successful
+		// if BOTH user name and password are correct then the login is successful
 		if (USERNAME_ACTUAL.equals(inputedUsername) && PASSWORD_ACTUAL.equals(inputedPassword))
 		{
 			System.out.print("Login successful!");
-		} else
+		}
+		// if ONLY the PASSWORD is correct
+		else if (PASSWORD_ACTUAL.equals(inputedPassword))
 		{
-			System.out.print("failed");
+			System.out.println("Incorrect username");
+		}
+		// if ONLY the USER NAME is correct
+		else if (USERNAME_ACTUAL.equals(inputedUsername))
+		{
+			System.out.println("Incorrect password");
+		}
+		// if both are false
+		else
+		{
+			System.out.print("Both username and password are incorrect. Login failed.");
 		}
 
 	}
