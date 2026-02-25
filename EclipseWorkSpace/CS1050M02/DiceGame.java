@@ -14,6 +14,11 @@ public class DiceGame
 
 		int total = (dice1 + dice2);
 		System.out.println("You rolled: " + dice1 + " and " + dice2);
+
+		if (total == 7 || total == 11)
+		{
+			System.out.print("You win!");
+		} else if (dice1 == 6 && dice2 == 6)
 	}
 
 }
