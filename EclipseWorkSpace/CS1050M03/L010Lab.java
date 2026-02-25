@@ -36,6 +36,8 @@ public class L010Lab
 
 		// output message
 		System.out.printf("The exponent is: %d", exponent);
+		// tells the user what their inputed exponent is.
+		System.out.println("The exponent is: " + exponent);
 
 	}
 
