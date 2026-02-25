@@ -25,6 +25,16 @@ public class userLoginLab
 		// initialized inputedPassword
 		System.out.print("Input password: ");
 		inputedPassword = keyboardInput.next();
+
+		// if both user name and password are correct then the login is successful
+		if (USERNAME_ACTUAL.equals(inputedUsername) && PASSWORD_ACTUAL.equals(inputedPassword))
+		{
+			System.out.print("Login successful!");
+		} else
+		{
+			System.out.print("failed");
+		}
+
 	}
 
 }
