@@ -17,6 +17,14 @@ public class userLoginLab
 		// declared space for inputs
 		String inputedUsername;
 		String inputedPassword;
+
+		// initialized inputedUsername
+		System.out.print("Input username: ");
+		inputedUsername = keyboardInput.next();
+
+		// initialized inputedPassword
+		System.out.print("Input password: ");
+		inputedPassword = keyboardInput.next();
 	}
 
 }
