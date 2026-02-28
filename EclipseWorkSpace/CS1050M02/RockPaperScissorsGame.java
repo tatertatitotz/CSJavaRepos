@@ -9,6 +9,11 @@ public class RockPaperScissorsGame
 		char player;
 		char computer;
 
+		// a string that we can draw chars from
+		String possibleChars = "RPS";
+
+		// allows a computer to randomly select a char
+		computer = possibleChars.charAt((int) (Math.random() * 3));
 	}
 
 }
