@@ -21,9 +21,10 @@ public class nestedIfUserLoginLab
 		// declared a boolean to fit in the scope of ALL LOOPS
 		boolean loggedIn;
 
+		// do this WHILE the while statement is met
 		do
 		{
-
+			// the number of attempts begins at 0, there are no more than 3 attempts allowed
 			for (int attempts = 0; attempts <= 3; ++attempts)
 			{
 				// initialized inputedUsername
@@ -34,7 +35,9 @@ public class nestedIfUserLoginLab
 				System.out.print("Input password: ");
 				inputedPassword = keyboardInput.next();
 
-				// assumes the log in is true
+				// assumes the log in is true no matter the previous attempts.
+				// so if they get it right, this variable will allow the stack to move past the
+				// while loop
 				loggedIn = true;
 
 				// if user name is correct
@@ -51,6 +54,7 @@ public class nestedIfUserLoginLab
 					else
 					{
 						System.out.println("Incorrect password");
+						// if the password is incorrect, logged in is false
 						loggedIn = false;
 					}
 				}
@@ -67,10 +71,12 @@ public class nestedIfUserLoginLab
 					{
 						System.out.println("Both username and password are incorrect. Login failed.");
 					}
+					// if the user name is incorrect, boolean logged in will be false
 					loggedIn = false;
 				}
 			}
 		} // end of do
+			// as long as this is false, it will do
 		while (loggedIn == false);
 
 		System.out.print("3 Attempts.");
