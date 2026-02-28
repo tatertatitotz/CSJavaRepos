@@ -14,6 +14,11 @@ public class RockPaperScissorsGame
 
 		// allows a computer to randomly select a char
 		computer = possibleChars.charAt((int) (Math.random() * 3));
+
+		// searches for keyboard inputs
+		Scanner keyboardInput = new Scanner(System.in);
+
+		player = Character.toUpperCase(keyboardInput.next().charAt(0));
 	}
 
 }
