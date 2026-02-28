@@ -18,8 +18,9 @@ public class nestedIfUserLoginLab
 		String inputedUsername;
 		String inputedPassword;
 
-		// declared a boolean to fit in the scope of while
-		boolean loggedIn = true;
+		// declared a boolean to fit in the scope of ALL LOOPS
+		boolean loggedIn;
+
 		do
 		{
 
@@ -42,6 +43,8 @@ public class nestedIfUserLoginLab
 					// if both user name and password are correct
 					if (PASSWORD_ACTUAL.equals(inputedPassword))
 					{
+						// LOGGEDIN IS NOT ASSIGNED HERE, therefore, only this outcome allows the user
+						// to pass the while loop
 						System.out.print("Login successful!");
 					}
 					// if ONLY the USER NAME is correct
