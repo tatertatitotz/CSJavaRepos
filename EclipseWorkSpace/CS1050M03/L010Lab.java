@@ -56,6 +56,8 @@ public class L010Lab
 
 		// displays the equation and its answer.
 		System.out.print(baseMult + "^" + exponent + " = " + base);
+		
+		keyboardInput.close()
 
 	}
 
