@@ -6,7 +6,12 @@ public class CalculateSum
 	public static void main(String[] args)
 	{
 		int sum = 0;
-		int max = 6;
+
+		Scanner keyboardInput = new Scanner(System.in);
+
+		System.out.print("What is your max?: ");
+		int max = keyboardInput.nextInt();
+
 		userMax(max);
 		System.out.print(max);
 	}// end of main
