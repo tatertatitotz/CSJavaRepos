@@ -14,6 +14,9 @@ public class CalculateSum
 
 		userMax(max);
 		System.out.print(max);
+
+		compoundingSum(sum, max);
+		System.out.print(sum);
 	}// end of main
 
 	// max is now defined as inputtedMax
@@ -24,4 +27,17 @@ public class CalculateSum
 			Scanner keyboardInput = new Scanner(System.in);
 			inputtedMax = keyboardInput.nextInt();
 		}
+		return inputtedMax;
+	}// end of userMax
+
+	public static int compoundingSum(int completeSum, int initializedMax)
+	{
+		for (int add = 0; add <= initializedMax; ++add)
+		{
+			completeSum = completeSum + add;
+			System.out.println(completeSum);
+		}
+		return completeSum;
+	}
+
 }// end of class
