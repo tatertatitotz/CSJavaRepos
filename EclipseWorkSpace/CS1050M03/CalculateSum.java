@@ -12,15 +12,16 @@ public class CalculateSum
 		System.out.print("What is your max?: ");
 		int max = keyboardInput.nextInt();
 
-		userMax(max);
-		System.out.print(max);
+		max = checkMax(max);
+		System.out.println("Your max is: " + max);
 
-		compoundingSum(sum, max);
-		System.out.print(sum);
+		// calculates the sum
+		sum = compoundingSum(sum, max);
+		System.out.println("Your sum is: " + sum);
 	}// end of main
 
 	// max is now defined as inputtedMax
-	public static int userMax(int inputtedMax)
+	public static int checkMax(int inputtedMax)
 	{
 		while (inputtedMax <= 0)
 		{
@@ -28,6 +29,7 @@ public class CalculateSum
 			inputtedMax = keyboardInput.nextInt();
 		}
 		return inputtedMax;
+
 	}// end of userMax
 
 	public static int compoundingSum(int completeSum, int initializedMax)
