@@ -7,10 +7,16 @@ public class CalculateSum
 	{
 		int sum = 0;
 		int max = 6;
+		userMax(max);
+		System.out.print(max);
 	}// end of main
-		for (int add = 0; add <= max; ++add)
+
+	// max is now defined as inputtedMax
+	public static int userMax(int inputtedMax)
+	{
+		while (inputtedMax <= 0)
 		{
-			sum = sum + add;
-			System.out.println(sum);
+			Scanner keyboardInput = new Scanner(System.in);
+			inputtedMax = keyboardInput.nextInt();
 		}
 }// end of class
