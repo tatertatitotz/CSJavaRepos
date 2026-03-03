@@ -39,13 +39,17 @@ public class CalculateSum
 
 	}// end of userMax
 
+	// calculating the sum, takes both sum and max
 	public static int compoundingSum(int completeSum, int initializedMax)
 	{
+		// adds 1 to add each time it loops
 		for (int add = 0; add <= initializedMax; ++add)
 		{
 			completeSum = completeSum + add;
+			// prints
 			System.out.println(completeSum);
 		}
+		// compoundingSum(sum, max) == completeSum
 		return completeSum;
 	}
 
