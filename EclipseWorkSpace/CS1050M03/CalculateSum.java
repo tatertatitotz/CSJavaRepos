@@ -37,7 +37,7 @@ public class CalculateSum
 		// checkMax(max) = inputtedMax
 		return inputtedMax;
 
-	}// end of userMax
+	}// end of checkMax
 
 	// calculating the sum, takes both sum and max
 	public static int compoundingSum(int completeSum, int initializedMax)
