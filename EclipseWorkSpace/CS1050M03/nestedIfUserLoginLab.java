@@ -67,9 +67,23 @@ public class nestedIfUserLoginLab
 					// if BOTH are incorrect
 					else
 					{
-						System.out.println("Both username and password are incorrect. Login failed.");
+						System.out.println("Login failed. Both username and password are incorrect.");
 					}
 				}
+				// if the user is attempting, the number of attempts left will display.
+				if (attempts < 2)
+				{
+					// displays the number of attempts remaining
+					System.out.println("You have " + (2 - attempts) + " attempts left.");
+				} else
+				{
+					// displays number of attempts
+					System.out.println("You have 0 attempts left.");
+					// allows an exit out of the while loop when the max attempts have been used
+					loggedIn = true;
+				}
+
+			} // end of for
 		} // end of do
 			// as long as logged in is true, it will do what do does
 		while (loggedIn == false);
