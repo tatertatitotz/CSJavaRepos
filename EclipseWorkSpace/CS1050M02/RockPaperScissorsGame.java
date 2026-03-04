@@ -26,8 +26,10 @@ public class RockPaperScissorsGame
 		// char
 		player = Character.toUpperCase(keyboardInput.next().charAt(0));
 
+		System.out.print(computer);
 
 		// this is a boolean flag that assumes that the input by player is valid
+		boolean validInput = true;
 
 		// if the input from player is NOT Rock Paper or Scissors it makes you input it
 		// again
