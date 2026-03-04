@@ -44,3 +44,13 @@ public class RockPaperScissorsGame
 			// char
 			player = Character.toUpperCase(keyboardInput.next().charAt(0));
 		} // end of while
+
+		if (player == computer)
+			;
+		{
+			System.out.print("Tie");
+		}
+
+	}// end of main
+
+}// end of class
