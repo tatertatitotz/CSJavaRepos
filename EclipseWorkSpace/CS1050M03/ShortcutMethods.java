@@ -4,8 +4,14 @@ public class ShortcutMethods
 
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
 
+	}
+
+	public static int randomInt(int min, int max)
+	{
+		int randomNummer;
+
+		return randomNumber;
 	}
 
 }
