@@ -5,12 +5,15 @@ public class CalculateSum
 
 	public static void main(String[] args)
 	{
+		// declares/initializes sum
 		int sum = 0;
 
+		// scanner for max
 		Scanner keyboardInput = new Scanner(System.in);
 
-		// allows user to initialize max
+		// console prompt for max
 		System.out.print("What is your max?: ");
+		// declares/initializes max with user input
 		int max = keyboardInput.nextInt();
 		keyboardInput.close();
 
