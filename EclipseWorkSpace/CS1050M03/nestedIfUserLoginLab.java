@@ -25,7 +25,7 @@ public class nestedIfUserLoginLab
 		do
 		{
 			// the number of attempts begins at 0, there are no more than 3 attempts allowed
-			for (int attempts = 0; attempts <= 3; ++attempts)
+			for (int attempts = 0; attempts < 3; ++attempts)
 			{
 				// initialized inputedUsername
 				System.out.print("Input username: ");
