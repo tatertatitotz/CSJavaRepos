@@ -65,6 +65,8 @@ public class Hello
 		System.out.println(postfix--);
 		System.out.println(postfix);
 
+		System.out.print(prefix);
+
 	}// end main
 
 }// end class
