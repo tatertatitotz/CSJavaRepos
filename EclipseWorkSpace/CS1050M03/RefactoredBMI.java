@@ -63,26 +63,35 @@ public class RefactoredBMI
 
 	}// end of main
 
+	// checks if the inputed weight is valid
 	public static double checkWeight(double weightMaybe)
 	{
+		// new scanner because new method
 		Scanner keyboardInput = new Scanner(System.in);
+		// while the height is negative or 0, allows you to input again.
 		while (weightMaybe <= 0)
 		{
 			System.out.print("Invalid Input. Enter weight: ");
 			weightMaybe = keyboardInput.nextDouble();
 		}
+		// closes outside so that you don't keep opening and closing the scanner
 		keyboardInput.close();
 		return weightMaybe;
 	}
 
+	// checks if the inputed height is valid
 	public static double checkHeight(double heightMaybe)
 	{
+		// new scanner because new method
 		Scanner keyboardInput = new Scanner(System.in);
+		// while the height is negative or 0, allows you to input again.
 		while (heightMaybe <= 0)
 		{
 			System.out.print("Invalid Input. Enter height: ");
+
 			heightMaybe = keyboardInput.nextDouble();
 		}
+		// closes outside so that you don't keep opening and closing the scanner
 		keyboardInput.close();
 		return heightMaybe;
 	}
