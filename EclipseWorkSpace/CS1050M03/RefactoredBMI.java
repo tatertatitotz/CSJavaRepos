@@ -7,15 +7,6 @@ public class RefactoredBMI
 	{
 		// Create constant an variables
 		final int BMI_US_FACTOR = 703;
-		// factor formula in pounds
-		// Variables
-		// declared weight
-		double weight;
-		// declared height;
-		double height;
-		// The user's BMI
-
-		Scanner keyboardInput = new Scanner(System.in);
 
 		// Tell the user what the program will do.
 		System.out.println(
@@ -23,6 +14,17 @@ public class RefactoredBMI
 		System.out.println("There are 4 BMI Categories: " + "\n Obese: BMI = +40 " + "\n Overweight: BMI >= 25 "
 				+ "\n Normal: BMI >= 18.5 " + "\n Underweight: BMI < 18.5.");
 		System.out.println("The BMI formula used is: weight * 703 / height^2.");
+
+		// Scanner defined
+		Scanner keyboardInput = new Scanner(System.in);
+
+		// Variables
+		// declared weight
+		double weight;
+		// declared height;
+		double height;
+		// The user's BMI
+
 		// Get the user's weight.
 		System.out.print("Enter your weight, in pounds: ");
 		weight = keyboardInput.nextDouble();
