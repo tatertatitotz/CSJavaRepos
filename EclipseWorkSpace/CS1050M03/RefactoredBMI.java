@@ -29,7 +29,7 @@ public class RefactoredBMI
 		System.out.print("Enter your weight, in pounds: ");
 		weight = keyboardInput.nextDouble();
 
-		checkWeight(weight);
+		weight = checkWeight(weight);
 
 		// Get the user's height.
 		System.out.print("Enter your height, in inches: ");
@@ -37,6 +37,7 @@ public class RefactoredBMI
 
 		// Calculate the user's body mass index.
 		double bmi = weight * BMI_US_FACTOR / (Math.pow(height, 2));
+		height = checkHeight(height);
 
 		// ---- BMI Categories ----
 
