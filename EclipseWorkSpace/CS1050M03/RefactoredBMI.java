@@ -27,6 +27,8 @@ public class RefactoredBMI
 		System.out.print("Enter your weight, in pounds: ");
 		weight = keyboardInput.nextDouble();
 
+		checkWeight(weight);
+
 		// Get the user's height.
 		System.out.print("Enter your height, in inches: ");
 		height = keyboardInput.nextDouble();
@@ -58,4 +60,15 @@ public class RefactoredBMI
 
 	}// end of main
 
+	public static double checkWeight(double weightMaybe)
+	{
+		Scanner keyboardInput = new Scanner(System.in);
+		while (weightMaybe <= 0)
+		{
+			System.out.print("Invalid Input. Enter weight: ");
+			weightMaybe = keyboardInput.nextDouble();
+		}
+		keyboardInput.close();
+		return weightMaybe;
+	}
 }// end of class
