@@ -71,7 +71,7 @@ public class RefactoredBMI
 		// while the height is negative or 0, allows you to input again.
 		while (weightMaybe <= 0)
 		{
-			System.out.print("Invalid Input. Enter weight: ");
+			System.out.print("Invalid Input, cannot be negative or 0. Enter weight: ");
 			weightMaybe = keyboardInput.nextDouble();
 		}
 		// closes outside so that you don't keep opening and closing the scanner
@@ -87,7 +87,7 @@ public class RefactoredBMI
 		// while the height is negative or 0, allows you to input again.
 		while (heightMaybe <= 0)
 		{
-			System.out.print("Invalid Input. Enter height: ");
+			System.out.print("Invalid Input, cannot be negative or 0. Enter height: ");
 
 			heightMaybe = keyboardInput.nextDouble();
 		}
