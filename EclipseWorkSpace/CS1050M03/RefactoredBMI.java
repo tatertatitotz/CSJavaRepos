@@ -71,4 +71,16 @@ public class RefactoredBMI
 		keyboardInput.close();
 		return weightMaybe;
 	}
+
+	public static double checkHeight(double heightMaybe)
+	{
+		Scanner keyboardInput = new Scanner(System.in);
+		while (heightMaybe <= 0)
+		{
+			System.out.print("Invalid Input. Enter height: ");
+			heightMaybe = keyboardInput.nextDouble();
+		}
+		keyboardInput.close();
+		return heightMaybe;
+	}
 }// end of class
