@@ -33,6 +33,7 @@ public class RefactoredBMI
 		// Display the user's BMI.
 		String bmiCategory = calculateBMICategory(bmi);
 
+		System.out.println("Athlete's BMI is: " + bmi + ". Category: " + bmiCategory);
 
 	}// end of main
 
