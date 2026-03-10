@@ -21,6 +21,9 @@ public class RefactoredBMI
 		// declared height;
 		double height;
 		// The user's BMI
+		boolean continueYN;
+		do
+		{
 			weight = checkWeight(keyboardInput);
 
 			height = checkHeight(keyboardInput);
@@ -34,6 +37,7 @@ public class RefactoredBMI
 			ifUnderweight(bmiCategory);
 
 			continueYN = anotherAthlete(keyboardInput);
+		} while (continueYN == true);
 
 	}// end of main
 
