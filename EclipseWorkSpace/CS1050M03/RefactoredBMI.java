@@ -17,7 +17,6 @@ public class RefactoredBMI
 
 		// new scanner because new method
 		Scanner keyboardInput = new Scanner(System.in);
-
 		// Variables
 		// declared weight
 		double weight;
@@ -29,7 +28,7 @@ public class RefactoredBMI
 
 		height = checkHeight(keyboardInput);
 
-		// ---- BMI Categories ----
+		double bmi = calculateBMI(weight, height);
 
 		// multi-way if
 		if (bmi >= 40)
@@ -88,4 +87,17 @@ public class RefactoredBMI
 		}
 		return heightMaybe;
 	}
+
+	// calculates the BMI using initialized and checked weight and height
+	public static double calculateBMI(double finalWeight, double finalHeight)
+	{
+		// Create constant an variables
+		final int BMI_US_FACTOR = 703;
+		double bmiResult;
+
+		bmiResult = finalWeight * BMI_US_FACTOR / (Math.pow(finalHeight, 2));
+
+		return bmiResult;
+	}
+
 }// end of class
