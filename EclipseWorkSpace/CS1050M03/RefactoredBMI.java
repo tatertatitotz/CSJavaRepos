@@ -77,7 +77,7 @@ public class RefactoredBMI
 		double heightMaybe;
 
 		// Get the user's height.
-		System.out.print("Enter your height, in pounds: ");
+		System.out.print("Enter your height, in inches: ");
 		heightMaybe = inputAttempt.nextDouble();
 
 		// while the height is negative or 0, allows you to input again.
