@@ -5,8 +5,6 @@ public class RefactoredBMI
 
 	public static void main(String[] args)
 	{
-		// Create constant an variables
-		final int BMI_US_FACTOR = 703;
 
 		// Tell the user what the program will do.
 		System.out.println(
@@ -30,25 +28,11 @@ public class RefactoredBMI
 
 		double bmi = calculateBMI(weight, height);
 
-		// multi-way if
-		if (bmi >= 40)
-		{
-			System.out.println("Obese");
-		} else if (bmi >= 25)
-		{
-			System.out.println("Overweight");
-		} else if (bmi >= 18.5)
-		{
-			System.out.println("Normal");
-		} else
-		{
-			System.out.println("Underweight");
-		} // end else
+		// ---- BMI Categories ----
 
 		// Display the user's BMI.
-		System.out.printf("Your body mass index (BMI) is %f", bmi);
+		String bmiCategory = calculateBMICategory(bmi);
 
-		keyboardInput.close();
 
 	}// end of main
 
@@ -98,6 +82,27 @@ public class RefactoredBMI
 		bmiResult = finalWeight * BMI_US_FACTOR / (Math.pow(finalHeight, 2));
 
 		return bmiResult;
+	}
+
+	// determines BMI Category
+	public static String calculateBMICategory(double bmiFinal)
+	{
+		String bmiCategoryName;
+		if (bmiFinal >= 40)
+		{
+			bmiCategoryName = "Obese";
+		} else if (bmiFinal >= 25)
+		{
+			bmiCategoryName = "Overweight";
+		} else if (bmiFinal >= 18.5)
+		{
+			bmiCategoryName = "Normal";
+		} else
+		{
+			bmiCategoryName = "Underweight";
+		} // end else
+
+		return bmiCategoryName;
 	}
 
 }// end of class
