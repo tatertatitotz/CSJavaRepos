@@ -21,20 +21,19 @@ public class RefactoredBMI
 		// declared height;
 		double height;
 		// The user's BMI
+			weight = checkWeight(keyboardInput);
 
-		weight = checkWeight(keyboardInput);
+			height = checkHeight(keyboardInput);
 
-		height = checkHeight(keyboardInput);
+			double bmi = calculateBMI(weight, height);
 
-		double bmi = calculateBMI(weight, height);
+			// Display the user's BMI.
+			String bmiCategory = calculateBMICategory(bmi);
 
-		// ---- BMI Categories ----
+			System.out.println("Athlete's BMI is: " + bmi + ". Category: " + bmiCategory);
+			ifUnderweight(bmiCategory);
 
-		// Display the user's BMI.
-		String bmiCategory = calculateBMICategory(bmi);
-
-		System.out.println("Athlete's BMI is: " + bmi + ". Category: " + bmiCategory);
-		ifUnderweight(bmiCategory);
+			continueYN = anotherAthlete(keyboardInput);
 
 	}// end of main
 
@@ -114,4 +113,27 @@ public class RefactoredBMI
 			System.out.print("Needs Review.");
 		}
 	}
-}// end of class
+
+	public static boolean anotherAthlete(Scanner yesOrNo)
+	{
+		System.out.println("Would you like to add another Athlete?");
+		System.out.print("Y: Yes /n N: No");
+		char answer = Character.toUpperCase(yesOrNo.next().charAt(0));
+		while (answer != 'Y' || answer != 'N')
+		{
+			System.out.print("Incorrect Input. Try again: ");
+			answer = Character.toUpperCase(yesOrNo.next().charAt(0));
+		}
+		boolean completeAnswer;
+
+		if (answer == 'Y')
+		{
+			completeAnswer = true;
+		} else
+		{
+			completeAnswer = false;
+		}
+		return completeAnswer;
+	}
+}
+// end of class
