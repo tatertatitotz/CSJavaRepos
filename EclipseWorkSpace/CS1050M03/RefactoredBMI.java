@@ -15,7 +15,7 @@ public class RefactoredBMI
 				+ "\n Normal: BMI >= 18.5 " + "\n Underweight: BMI < 18.5.");
 		System.out.println("The BMI formula used is: weight * 703 / height^2.");
 
-		// Scanner defined
+		// new scanner because new method
 		Scanner keyboardInput = new Scanner(System.in);
 
 		// Variables
@@ -25,19 +25,9 @@ public class RefactoredBMI
 		double height;
 		// The user's BMI
 
-		// Get the user's weight.
-		System.out.print("Enter your weight, in pounds: ");
-		weight = keyboardInput.nextDouble();
+		weight = checkWeight(keyboardInput);
 
-		weight = checkWeight(weight);
-
-		// Get the user's height.
-		System.out.print("Enter your height, in inches: ");
-		height = keyboardInput.nextDouble();
-
-		// Calculate the user's body mass index.
-		double bmi = weight * BMI_US_FACTOR / (Math.pow(height, 2));
-		height = checkHeight(height);
+		height = checkHeight(keyboardInput);
 
 		// ---- BMI Categories ----
 
@@ -64,35 +54,38 @@ public class RefactoredBMI
 	}// end of main
 
 	// checks if the inputed weight is valid
-	public static double checkWeight(double weightMaybe)
+	public static double checkWeight(Scanner inputAttempt)
 	{
-		// new scanner because new method
-		Scanner keyboardInput = new Scanner(System.in);
+		double weightMaybe;
+
+		// Get the user's weight.
+		System.out.print("Enter your weight, in pounds: ");
+		weightMaybe = inputAttempt.nextDouble();
+
 		// while the height is negative or 0, allows you to input again.
 		while (weightMaybe <= 0)
 		{
 			System.out.print("Invalid Input, cannot be negative or 0. Enter weight: ");
-			weightMaybe = keyboardInput.nextDouble();
+			weightMaybe = inputAttempt.nextDouble();
 		}
-		// closes outside so that you don't keep opening and closing the scanner
-		keyboardInput.close();
 		return weightMaybe;
 	}
 
 	// checks if the inputed height is valid
-	public static double checkHeight(double heightMaybe)
+	public static double checkHeight(Scanner inputAttempt)
 	{
-		// new scanner because new method
-		Scanner keyboardInput = new Scanner(System.in);
+		double heightMaybe;
+
+		// Get the user's height.
+		System.out.print("Enter your height, in pounds: ");
+		heightMaybe = inputAttempt.nextDouble();
+
 		// while the height is negative or 0, allows you to input again.
 		while (heightMaybe <= 0)
 		{
 			System.out.print("Invalid Input, cannot be negative or 0. Enter height: ");
-
-			heightMaybe = keyboardInput.nextDouble();
+			heightMaybe = inputAttempt.nextDouble();
 		}
-		// closes outside so that you don't keep opening and closing the scanner
-		keyboardInput.close();
 		return heightMaybe;
 	}
 }// end of class
