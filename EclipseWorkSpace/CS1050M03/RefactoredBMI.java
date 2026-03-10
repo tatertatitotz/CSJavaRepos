@@ -34,6 +34,7 @@ public class RefactoredBMI
 		String bmiCategory = calculateBMICategory(bmi);
 
 		System.out.println("Athlete's BMI is: " + bmi + ". Category: " + bmiCategory);
+		ifUnderweight(bmiCategory);
 
 	}// end of main
 
@@ -106,4 +107,11 @@ public class RefactoredBMI
 		return bmiCategoryName;
 	}
 
+	public static void ifUnderweight(String bmiDisclaimerCategory)
+	{
+		if (bmiDisclaimerCategory.equals("Underweight"))
+		{
+			System.out.print("Needs Review.");
+		}
+	}
 }// end of class
