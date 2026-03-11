@@ -16,6 +16,10 @@ public class LabL15ArraysIntro
 		finalGrades = new double[arrayLength];
 		firstNames = new String[arrayLength];
 
+		for (int count = 0; count < arrayLength; ++count)
+		{
+			System.out.print("First name of one student: ");
+		}
 	}
 
 }
