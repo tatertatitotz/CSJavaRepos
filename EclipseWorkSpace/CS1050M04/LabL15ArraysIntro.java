@@ -12,6 +12,10 @@ public class LabL15ArraysIntro
 
 		System.out.print("How many students are in the class?: ");
 		int arrayLength = keyboardInput.nextInt();
+
+		finalGrades = new double[arrayLength];
+		firstNames = new String[arrayLength];
+
 	}
 
 }
