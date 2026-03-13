@@ -30,6 +30,10 @@ public class TrainerProject
 
 			// calculate BMI/print
 			bmi = calculateBMI(weight, height);
+
+			// gets and prints bmi category
+			getBMICategory(bmi);
+
 	}
 
 	public static void printSummary()
@@ -69,5 +73,13 @@ public class TrainerProject
 		System.out.println("Your BMI is " + bmiCalculated + ".");
 
 		return bmiCalculated;
+	}
+
+	public static String getBMICategory(double bmiFinal)
+	{
+		// determines BMI Category
+		System.out.println("Your BMI category is " + bmiCategoryName);
+
+		return bmiCategoryName;
 	}
 }
