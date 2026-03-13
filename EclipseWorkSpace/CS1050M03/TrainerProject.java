@@ -17,6 +17,16 @@ public class TrainerProject
 		double bmi = 0;
 		boolean continueProcess;
 
+		// while restart is true, do this
+			// Get the user's weight.
+			System.out.print("Enter your weight, in pounds: ");
+			// weight
+			weight = getPositiveDouble(keyboardinput, weight);
+
+			// Get the user's weight.
+			System.out.print("Enter your height, in inches: ");
+			// height
+			height = getPositiveDouble(keyboardinput, height);
 	}
 
 	public static void printSummary()
@@ -29,4 +39,8 @@ public class TrainerProject
 		System.out.println("The BMI formula used is: weight * 703 / height^2.");
 	}
 
+	public static double getPositiveDouble(Scanner input, double bmiInput)
+	{
+		return bmiInput;
+	}
 }
