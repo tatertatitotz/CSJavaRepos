@@ -118,6 +118,16 @@ public class TrainerProject
 		System.out.println("Y: Yes \nN: No");
 		System.out.print("Input here: ");
 
+		// declares and initializes answer
+		char answer = Character.toUpperCase(askInput.next().charAt(0));
+
+		// while the answers aren't valid, forces input again
+		while (answer != 'Y' && answer != 'N')
+		{
+			System.out.print("Incorrect Input. Try again: ");
+			answer = Character.toUpperCase(askInput.next().charAt(0));
+		}
+
 		boolean completeAnswer;
 		return completeAnswer;
 	}
