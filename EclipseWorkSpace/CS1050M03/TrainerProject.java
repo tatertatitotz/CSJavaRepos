@@ -61,8 +61,13 @@ public class TrainerProject
 	{
 		// declared variable
 		double bmiCalculated;
+
 		// calculated bmi formula
 		bmiCalculated = weightChosen * 703 / Math.pow(heightChosen, 2);
+
+		// prints bmi
+		System.out.println("Your BMI is " + bmiCalculated + ".");
+
 		return bmiCalculated;
 	}
 }
