@@ -78,6 +78,26 @@ public class TrainerProject
 	public static String getBMICategory(double bmiFinal)
 	{
 		// determines BMI Category
+
+		String bmiCategoryName;
+		if (bmiFinal >= 40)
+		{
+			// bmi >=40 means obese
+			bmiCategoryName = "Obese";
+		} else if (bmiFinal >= 25)
+		{
+			// bmi >=25 means Overweight
+			bmiCategoryName = "Overweight";
+		} else if (bmiFinal >= 18.5)
+		{
+			// bmi >=18.5 means Normal
+			bmiCategoryName = "Normal";
+		} else
+		{
+			// bmi < 18.5 is underweight
+			bmiCategoryName = "Underweight: Needs Review";
+		} // end else
+			// prints bmicategory
 		System.out.println("Your BMI category is " + bmiCategoryName);
 
 		return bmiCategoryName;
