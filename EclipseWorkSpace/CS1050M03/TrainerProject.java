@@ -113,6 +113,11 @@ public class TrainerProject
 
 	public static boolean askToContinue(Scanner askInput)
 	{
+		// prompts for console
+		System.out.println("Would you like to add another Athlete?");
+		System.out.println("Y: Yes \nN: No");
+		System.out.print("Input here: ");
+
 		boolean completeAnswer;
 		return completeAnswer;
 	}
