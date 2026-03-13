@@ -27,6 +27,9 @@ public class TrainerProject
 			System.out.print("Enter your height, in inches: ");
 			// height
 			height = getPositiveDouble(keyboardinput, height);
+
+			// calculate BMI/print
+			bmi = calculateBMI(weight, height);
 	}
 
 	public static void printSummary()
@@ -52,5 +55,14 @@ public class TrainerProject
 		}
 		// passes value as the output of this method
 		return bmiInput;
+	}
+
+	public static double calculateBMI(double weightChosen, double heightChosen)
+	{
+		// declared variable
+		double bmiCalculated;
+		// calculated bmi formula
+		bmiCalculated = weightChosen * 703 / Math.pow(heightChosen, 2);
+		return bmiCalculated;
 	}
 }
