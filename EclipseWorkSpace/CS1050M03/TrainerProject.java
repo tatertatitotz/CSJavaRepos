@@ -129,6 +129,16 @@ public class TrainerProject
 		}
 
 		boolean completeAnswer;
+
+		// if the answer is yes repeat again
+		if (answer == 'Y')
+		{
+			completeAnswer = true;
+		} else
+		{
+			// if it is N
+			completeAnswer = false;
+		}
 		return completeAnswer;
 	}
 }
