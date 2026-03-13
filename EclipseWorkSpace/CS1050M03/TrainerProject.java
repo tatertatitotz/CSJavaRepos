@@ -41,6 +41,16 @@ public class TrainerProject
 
 	public static double getPositiveDouble(Scanner input, double bmiInput)
 	{
+		// initializing bmiInput
+		bmiInput = input.nextDouble();
+
+		// while the height is negative or 0, allows you to input again.
+		while (bmiInput <= 0)
+		{
+			System.out.print("Invalid Input, cannot be negative or 0. Enter again: ");
+			bmiInput = input.nextDouble();
+		}
+		// passes value as the output of this method
 		return bmiInput;
 	}
 }
