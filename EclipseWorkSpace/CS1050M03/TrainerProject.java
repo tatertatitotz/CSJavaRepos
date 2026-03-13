@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TrainerProject
 {
 
@@ -5,6 +7,15 @@ public class TrainerProject
 	{
 		// prints program summary
 		printSummary();
+
+		// creates a scanner
+		Scanner keyboardinput = new Scanner(System.in);
+
+		// declared and initialized variables to assign later
+		double weight = 0;
+		double height = 0;
+		double bmi = 0;
+		boolean continueProcess;
 
 	}
 
