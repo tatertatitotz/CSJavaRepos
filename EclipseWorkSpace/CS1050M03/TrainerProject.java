@@ -18,6 +18,8 @@ public class TrainerProject
 		boolean continueProcess;
 
 		// while restart is true, do this
+		do
+		{
 			// Get the user's weight.
 			System.out.print("Enter your weight, in pounds: ");
 			// weight
@@ -34,6 +36,12 @@ public class TrainerProject
 			// gets and prints bmi category
 			getBMICategory(bmi);
 
+			// asks user if they want to restart process
+			continueProcess = askToContinue(keyboardinput);
+		} while (continueProcess = true);
+
+		// ends the process
+		return;
 	}
 
 	public static void printSummary()
@@ -101,5 +109,11 @@ public class TrainerProject
 		System.out.println("Your BMI category is " + bmiCategoryName);
 
 		return bmiCategoryName;
+	}
+
+	public static boolean askToContinue(Scanner askInput)
+	{
+		boolean completeAnswer;
+		return completeAnswer;
 	}
 }
