@@ -26,6 +26,12 @@ public class LabL15ArraysIntro
 	public static double calculateSum(double[] gradesForSum)
 	{
 		double finalGradeSum = 0;
+		for (int count = 0; count < gradesForSum.length; ++count)
+		{
+			System.out.print("The Graded of the coresponding student: ");
+			finalGradeSum = finalGradeSum + gradesForSum[count];
+		}
+
 		return finalGradeSum;
 	}
 
