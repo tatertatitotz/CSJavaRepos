@@ -33,7 +33,7 @@ public class RockPaperScissorsGame
 
 		// if the input from player is NOT Rock Paper or Scissors it makes you input it
 		// again
-		while (player != 'R' || player != 'P' || player != 'S')
+		while (player != 'R' && player != 'P' && player != 'S')
 		{
 			// console output when the input is not valid
 			System.out.print("Improper input. Please try again: ");
