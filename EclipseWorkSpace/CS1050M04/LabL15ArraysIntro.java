@@ -47,6 +47,7 @@ public class LabL15ArraysIntro
 	{
 		double finalAverage = 0;
 		finalAverage = calculatedSum / gradesForAverage.length;
+		System.out.println("The class average is: " + finalAverage);
 
 		return finalAverage;
 	}
