@@ -21,6 +21,10 @@ public class LabL15ArraysIntro
 		for (int count = 0; count < arrayLength; ++count)
 		{
 			System.out.print("First name of one student: ");
+			firstNames[count] = keyboardInput.next();
+
+			System.out.print("The Graded of the coresponding student: ");
+			finalGrades[count] = keyboardInput.nextDouble();
 		}
 
 		sum = calculateSum(finalGrades);
