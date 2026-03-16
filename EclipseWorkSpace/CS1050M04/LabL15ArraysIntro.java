@@ -9,6 +9,7 @@ public class LabL15ArraysIntro
 
 		double[] finalGrades;
 		String[] firstNames;
+		double sum = 0;
 
 		System.out.print("How many students are in the class?: ");
 		int arrayLength = keyboardInput.nextInt();
@@ -21,15 +22,15 @@ public class LabL15ArraysIntro
 			System.out.print("First name of one student: ");
 		}
 
-		calculateSum(finalGrades);
+		sum = calculateSum(finalGrades);
 	}// end of main
 	public static double calculateSum(double[] gradesForSum)
 	{
 		double finalGradeSum = 0;
 		for (int count = 0; count < gradesForSum.length; ++count)
 		{
-			System.out.print("The Graded of the coresponding student: ");
 			finalGradeSum = finalGradeSum + gradesForSum[count];
+
 		}
 
 		return finalGradeSum;
