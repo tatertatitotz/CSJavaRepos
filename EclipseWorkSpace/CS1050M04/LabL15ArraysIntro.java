@@ -29,6 +29,8 @@ public class LabL15ArraysIntro
 
 		sum = calculateSum(finalGrades);
 		average = calculateAverage(sum, finalGrades);
+
+		aboveAverageDisplay(finalGrades, firstNames, average);
 	}// end of main
 
 	public static double calculateSum(double[] gradesForSum)
@@ -51,4 +53,11 @@ public class LabL15ArraysIntro
 
 		return finalAverage;
 	}
+
+	public static void aboveAverageDisplay(double[] displayGrades, String[] displayNames, double averageGrades)
+	{
+		for (int count = 0; count < displayGrades.length; ++count)
+		}
+	}
 }
+// end of class
