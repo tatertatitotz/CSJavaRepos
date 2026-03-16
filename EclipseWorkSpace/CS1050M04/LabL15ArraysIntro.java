@@ -10,6 +10,7 @@ public class LabL15ArraysIntro
 		double[] finalGrades;
 		String[] firstNames;
 		double sum = 0;
+		double average = 0;
 
 		System.out.print("How many students are in the class?: ");
 		int arrayLength = keyboardInput.nextInt();
@@ -23,7 +24,9 @@ public class LabL15ArraysIntro
 		}
 
 		sum = calculateSum(finalGrades);
+		average = calculateAverage(sum, finalGrades);
 	}// end of main
+
 	public static double calculateSum(double[] gradesForSum)
 	{
 		double finalGradeSum = 0;
@@ -36,4 +39,11 @@ public class LabL15ArraysIntro
 		return finalGradeSum;
 	}
 
+	public static double calculateAverage(double calculatedSum, double[] gradesForAverage)
+	{
+		double finalAverage = 0;
+		finalAverage = calculatedSum / gradesForAverage.length;
+
+		return finalAverage;
+	}
 }
