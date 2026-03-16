@@ -20,6 +20,13 @@ public class LabL15ArraysIntro
 		{
 			System.out.print("First name of one student: ");
 		}
+
+		calculateSum(finalGrades);
+	}// end of main
+	public static double calculateSum(double[] gradesForSum)
+	{
+		double finalGradeSum = 0;
+		return finalGradeSum;
 	}
 
 }
