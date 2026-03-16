@@ -23,7 +23,7 @@ public class LabL15ArraysIntro
 			System.out.print("First name of one student: ");
 			firstNames[count] = keyboardInput.next();
 
-			System.out.print("The Graded of the coresponding student: ");
+			System.out.print(firstNames[count] + "'s grade: ");
 			finalGrades[count] = keyboardInput.nextDouble();
 		}
 
