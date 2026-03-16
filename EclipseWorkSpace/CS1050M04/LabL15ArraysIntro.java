@@ -63,11 +63,12 @@ public class LabL15ArraysIntro
 			{
 				System.out.println(
 						displayNames[count] + " with a grade of " + displayGrades[count] + " is above Average");
-			} else
-			{
-				System.out
-						.println(displayNames[count] + " did not score above average. Grade: " + displayGrades[count]);
 			}
+//			else
+//			{
+//				System.out
+//						.println(displayNames[count] + " did not score above average. Grade: " + displayGrades[count]);
+//			}
 
 		}
 	}
