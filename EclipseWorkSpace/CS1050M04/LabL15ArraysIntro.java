@@ -56,7 +56,19 @@ public class LabL15ArraysIntro
 
 	public static void aboveAverageDisplay(double[] displayGrades, String[] displayNames, double averageGrades)
 	{
+
 		for (int count = 0; count < displayGrades.length; ++count)
+		{
+			if (displayGrades[count] > averageGrades)
+			{
+				System.out.println(
+						displayNames[count] + " with a grade of " + displayGrades[count] + " is above Average");
+			} else
+			{
+				System.out
+						.println(displayNames[count] + " did not score above average. Grade: " + displayGrades[count]);
+			}
+
 		}
 	}
 }
