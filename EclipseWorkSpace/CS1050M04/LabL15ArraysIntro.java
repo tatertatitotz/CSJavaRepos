@@ -31,6 +31,8 @@ public class LabL15ArraysIntro
 		average = calculateAverage(sum, finalGrades);
 
 		aboveAverageDisplay(finalGrades, firstNames, average);
+
+		keyboardInput.close();
 	}// end of main
 
 	public static double calculateSum(double[] gradesForSum)
