@@ -53,10 +53,31 @@ public class RockPaperScissorsGame
 		{
 			if (player == 'R')
 			{
+				if (computer == 'P')
+				{
+					System.out.println("You win!");
+				} else if (computer == 'S')
+				{
+					System.out.println("You lose.");
+				}
 			} else if (player == 'P')
 			{
+				if (computer == 'R')
+				{
+					System.out.println("You lose.");
+				} else if (computer == 'S')
+				{
+					System.out.println("You win!");
+				}
 			} else if (player == 'S')
 			{
+				if (computer == 'P')
+				{
+					System.out.println("You win!");
+				} else if (computer == 'R')
+				{
+					System.out.println("You lose.");
+				}
 			}
 		}
 
