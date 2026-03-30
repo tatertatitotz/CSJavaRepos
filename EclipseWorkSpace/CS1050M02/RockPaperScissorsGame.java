@@ -26,8 +26,6 @@ public class RockPaperScissorsGame
 		// char
 		player = Character.toUpperCase(keyboardInput.next().charAt(0));
 
-		System.out.print(computer);
-
 		// this is a boolean flag that assumes that the input by player is valid
 		boolean validInput = true;
 
@@ -45,10 +43,21 @@ public class RockPaperScissorsGame
 			player = Character.toUpperCase(keyboardInput.next().charAt(0));
 		} // end of while
 
+		System.out.println("_ vs. _");
+		System.out.println(player + " vs. " + computer);
+
 		if (player == computer)
-			;
 		{
 			System.out.print("Tie");
+		} else
+		{
+			if (player == 'R')
+			{
+			} else if (player == 'P')
+			{
+			} else if (player == 'S')
+			{
+			}
 		}
 
 	}// end of main
