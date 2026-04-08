@@ -57,8 +57,9 @@ class SimpleCircle
 		radius = newRadius;
 	}// end setRadius Method
 
+	// returns object radius
 	double getRadius()
 	{
 		return radius;
-	}
+	}// end of getRadius
 }// end class
