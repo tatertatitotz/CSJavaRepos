@@ -68,13 +68,41 @@ public class ProjectIteration01
 				height = input.nextDouble();
 			} while (getValidNumber(height) == false);
 
+			bmi[count] = calculateBMI(weight, height);
 			do
 			{
 				System.out.print("Enter age in years: ");
 				age = input.nextDouble();
 
 			} while (getValidNumber(age) == false);
+
+			heartRates[count] = calculateMHR(age);
+
 		} // end of for loop
 	}// end enterAthleteData
 
+	public static double calculateBMI(double weight, double height)
+	{
+		final int BMI_FACTOR = 703;
+		double finalBMI;
+
+		finalBMI = 703 * weight / Math.pow(height, 2);
+
+		return finalBMI;
+	}
+
+	public static double calculateMHR(double ageMHR)
+	{
+		final int MHR_FACTOR = 220;
+		double mhr;
+		mhr = MHR_FACTOR - ageMHR;
+		return mhr;
+	}
+
+	public static double calculateAverageMHR(double[] heartRatesForAvg)
+	{
+		double averageMHR;
+
+		return averageMHR;
+	}
 }// end class
