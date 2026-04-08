@@ -66,7 +66,7 @@ public class ProjectIteration01
 
 			double weight = 0;
 			double height = 0;
-			double age = 0;
+			int age = 0;
 
 			do
 			{
@@ -84,7 +84,7 @@ public class ProjectIteration01
 			do
 			{
 				System.out.print("Enter age in years: ");
-				age = input.nextDouble();
+				age = input.nextInt();
 
 			} while (getValidNumber(age) == false);
 
