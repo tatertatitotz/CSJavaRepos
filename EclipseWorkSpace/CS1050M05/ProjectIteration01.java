@@ -113,8 +113,12 @@ public class ProjectIteration01
 
 	public static double calculateAverageMHR(double[] heartRatesForAvg)
 	{
-		double averageMHR;
+		double averageMHR = 0;
 
+		for (int count = 0; count < heartRatesForAvg.length; ++count)
+		{
+			averageMHR = averageMHR + heartRatesForAvg[count];
+		}
 		return averageMHR;
 	}
 }// end class
