@@ -5,13 +5,17 @@ public class ProjectIteration01
 	public static void main(String[] args)
 	{
 		Scanner inputMain = new Scanner(System.in);
-		String[] namesMain;
-		double[] weight;
-		double[] height;
+		String[] namesMain
 		double[] heartRatesMain;
 		double[] bmiMain;
 
 		int numberOfAthletes = howManyAthletes(inputMain);
+
+		namesMain = new String[numberOfAthletes];
+		heartRatesMain = new double[numberOfAthletes];
+		bmiMain = new double[numberOfAthletes];
+
+		enterAthleteData(namesMain, bmiMain, heartRatesMain, inputMain);
 
 	}// end main
 
@@ -40,4 +44,18 @@ public class ProjectIteration01
 
 		return athletes;
 	}
+
+	public static void enterAthleteData(String[] names, double[] bmi, double[] heartRates, Scanner input)
+	{
+		for (int count = 0; count < names.length; ++count)
+		{
+			System.out.print("Enter athlete's first name: ");
+			names[count] = input.next();
+
+			double weight = 0;
+			double height = 0;
+			double age = 0;
+		} // end of for loop
+	}// end enterAthleteData
+
 }// end class
