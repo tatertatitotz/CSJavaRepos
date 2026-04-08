@@ -55,12 +55,25 @@ public class ProjectIteration01
 			double weight = 0;
 			double height = 0;
 			double age = 0;
+
+			do
+			{
 				System.out.print("Enter weight in pounds: ");
 				weight = input.nextDouble();
+			} while (getValidNumber(weight) == false);
+
+			do
+			{
 				System.out.print("Enter height in inches: ");
 				height = input.nextDouble();
+			} while (getValidNumber(height) == false);
+
+			do
+			{
 				System.out.print("Enter age in years: ");
 				age = input.nextDouble();
+
+			} while (getValidNumber(age) == false);
 		} // end of for loop
 	}// end enterAthleteData
 
