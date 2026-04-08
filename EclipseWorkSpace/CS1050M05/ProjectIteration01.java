@@ -5,9 +5,11 @@ public class ProjectIteration01
 	public static void main(String[] args)
 	{
 		Scanner inputMain = new Scanner(System.in);
-		String[] namesMain
+		String[] namesMain;
 		double[] heartRatesMain;
 		double[] bmiMain;
+
+		programOverview();
 
 		int numberOfAthletes = howManyAthletes(inputMain);
 
@@ -18,6 +20,16 @@ public class ProjectIteration01
 		enterAthleteData(namesMain, bmiMain, heartRatesMain, inputMain);
 
 	}// end main
+
+	public static void programOverview()
+	{
+		System.out.println("**************************************\n" + "Program Overview\n"
+				+ "**************************************\n" + "The trainer enters how many athletes are on the team.\n"
+				+ "Then the trainer enters each athlete's weight, height and age.\n"
+				+ "For each athlete, the program calculates BMI and Max Heart Rate.\n" + "BMI Categories\n"
+				+ "Under 18.5: Underweight\r\n" + "18.5 to under 30: Normal\n" + "30 or greater: High\n" + "\n"
+				+ "Calculates percentage of max heart rate for athlete training goal if needed" + "\n");
+	}
 
 	public static boolean getValidNumber(double checkNumber)
 	{
