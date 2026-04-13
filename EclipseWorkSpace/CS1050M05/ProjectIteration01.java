@@ -181,6 +181,20 @@ public class ProjectIteration01
 		}
 		System.out.println("\n");
 	}
+
+	public static void calculateHighestMHR(String[] nameHigh, double[] mhrHigh)
+	{
+		double highestMHR = 0;
+		int indexMHR = 0;
+		for (int count = 0; count < nameHigh.length; ++count)
+		{
+			if (highestMHR < mhrHigh[count])
+			{
+				highestMHR = mhrHigh[count];
+				indexMHR = count;
+			}
+		}
+		System.out.println(nameHigh[indexMHR] + " has highest max heart rate: " + mhrHigh[indexMHR] + "\n");
 	}
 
 	public static double calculateAverageMHR(double[] heartRatesForAvg)
