@@ -216,6 +216,11 @@ public class ProjectIteration01
 	{
 		System.out.print("Athletes above or equal to average MHR: \n");
 		for (int count = 0; count < nameAbove.length; ++count)
+		{
+			if (mhrCheckAbove[count] >= averageCompare)
+			{
+				System.out.println(nameAbove[count]);
+			}
 		}
 	}
 }// end class
