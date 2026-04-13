@@ -5,19 +5,34 @@ public class ProjectIteration01
 	public static void main(String[] args)
 	{
 		Scanner inputMain = new Scanner(System.in);
-		String[] namesMain;
-		double[] heartRatesMain;
-		double[] bmiMain;
+//		String[] namesMain;
+//		double[] heartRatesMain;
+//		double[] bmiMain;
+		double averageMHRMain;
 
 		programOverview();
 
-		int numberOfAthletes = howManyAthletes(inputMain);
+		System.out.println("**************************************\r\n" + "Athlete Entry\r\n"
+				+ "**************************************");
 
-		namesMain = new String[numberOfAthletes];
-		heartRatesMain = new double[numberOfAthletes];
-		bmiMain = new double[numberOfAthletes];
+		int numberOfAthletes = 6;// howManyAthletes(inputMain);
 
-		enterAthleteData(namesMain, bmiMain, heartRatesMain, inputMain);
+//		namesMain = new String[numberOfAthletes];
+//		heartRatesMain = new double[numberOfAthletes];
+//		bmiMain = new double[numberOfAthletes];
+
+		String[] namesMain =
+		{ "Gregg", "Vivian", "Tabu", "Horus", "Vezzek", "Endren" };
+		double[] heartRatesMain =
+		{ 120, 200, 200, 300, 220, 240 };
+		double[] bmiMain =
+		{ 20, 20, 20, 20, 20, 20 };
+		// enterAthleteData(namesMain, bmiMain, heartRatesMain, inputMain);
+		displayAthleteBMI(namesMain, bmiMain, heartRatesMain);
+		outsideNormalBMI(namesMain, bmiMain);
+		averageMHRMain = calculateAverageMHR(heartRatesMain);
+		calculateHighestMHR(namesMain, heartRatesMain);
+		displayAboveAverage(namesMain, heartRatesMain, averageMHRMain);
 
 	}// end main
 
@@ -109,6 +124,18 @@ public class ProjectIteration01
 		double mhr;
 		mhr = MHR_FACTOR - ageMHR;
 		return mhr;
+	}
+
+	public static void displayAthleteBMI(String[] nameBMI, double[] bmiDisplay, double[] mhrDisplay)
+	{
+
+		for (int count = 0; count < nameBMI.length; ++count)
+		{
+			System.out.println(nameBMI[count]);
+			System.out.println("BMI: " + bmiDisplay[count]);
+			System.out.println("Category: " + bmiCategory(bmiDisplay[count]));
+			System.out.println("MHR: " + mhrDisplay[count] + "\n");
+		}
 	}
 
 	public static double calculateAverageMHR(double[] heartRatesForAvg)
