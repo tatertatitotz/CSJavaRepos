@@ -138,6 +138,26 @@ public class ProjectIteration01
 		}
 	}
 
+	public static String bmiCategory(double bmiGiven)
+	{
+		String bmiCategoryName;
+		if (bmiGiven >= 40)
+		{
+			bmiCategoryName = "Obese";
+		} else if (bmiGiven >= 25)
+		{
+			bmiCategoryName = "Overweight";
+		} else if (bmiGiven >= 18.5)
+		{
+			bmiCategoryName = "Normal";
+		} else
+		{
+			bmiCategoryName = "Underweight";
+		} // end else
+
+		return bmiCategoryName;
+	}
+
 	public static double calculateAverageMHR(double[] heartRatesForAvg)
 	{
 		double averageMHR = 0;
