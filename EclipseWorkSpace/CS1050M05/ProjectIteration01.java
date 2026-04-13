@@ -160,9 +160,21 @@ public class ProjectIteration01
 
 	public static void outsideNormalBMI(String[] nameNoNorm, double[] bmiNoNorm)
 	{
+		int normalBMI = 0;
 
 		for (int count = 0; count < nameNoNorm.length; ++count)
 		{
+			if (bmiNoNorm[count] >= 25)
+			{
+				System.out.print("Above Normal: " + nameNoNorm[count]);
+			} else if (bmiNoNorm[count] < 18.5)
+			{
+				System.out.print("Below Normal: " + nameNoNorm[count]);
+			} else
+			{
+				++normalBMI;
+			}
+		}
 		}
 		System.out.println("\n");
 	}
