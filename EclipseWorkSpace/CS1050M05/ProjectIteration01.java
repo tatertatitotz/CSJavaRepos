@@ -160,6 +160,12 @@ public class ProjectIteration01
 
 	public static void outsideNormalBMI(String[] nameNoNorm, double[] bmiNoNorm)
 	{
+
+		for (int count = 0; count < nameNoNorm.length; ++count)
+		{
+		}
+		System.out.println("\n");
+	}
 	}
 
 	public static double calculateAverageMHR(double[] heartRatesForAvg)
