@@ -175,6 +175,9 @@ public class ProjectIteration01
 				++normalBMI;
 			}
 		}
+		if (normalBMI == nameNoNorm.length)
+		{
+			System.out.print("No athletes outside of normal range");
 		}
 		System.out.println("\n");
 	}
