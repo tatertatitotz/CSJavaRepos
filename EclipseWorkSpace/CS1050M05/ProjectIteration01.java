@@ -205,6 +205,10 @@ public class ProjectIteration01
 		{
 			averageMHR = averageMHR + heartRatesForAvg[count];
 		}
+		averageMHR = averageMHR / heartRatesForAvg.length;
+
+		System.out.println("Team Average Max Heart Rates: " + averageMHR + "\n");
+
 		return averageMHR;
 	}
 }// end class
