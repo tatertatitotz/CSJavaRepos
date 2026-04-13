@@ -27,9 +27,16 @@ public class ProjectIteration01
 		{ 120, 200, 200, 300, 220, 240 };
 		double[] bmiMain =
 		{ 20, 20, 20, 20, 20, 20 };
+
 		// enterAthleteData(namesMain, bmiMain, heartRatesMain, inputMain);
+
+		System.out.println("========== Athlete Summary==========");
 		displayAthleteBMI(namesMain, bmiMain, heartRatesMain);
+
+		System.out.println("========== BMI Analysis ==========");
 		outsideNormalBMI(namesMain, bmiMain);
+
+		System.out.println("========== MHR Analysis ==========");
 		averageMHRMain = calculateAverageMHR(heartRatesMain);
 		calculateHighestMHR(namesMain, heartRatesMain);
 		displayAboveAverage(namesMain, heartRatesMain, averageMHRMain);
@@ -65,7 +72,7 @@ public class ProjectIteration01
 
 		do
 		{
-			System.out.print("Enter the number of athletes on the team: ");
+			System.out.println("Enter the number of athletes on the team: \r");
 			athletes = inputNumber.nextInt();
 		} while (getValidNumber(athletes) == false);
 
@@ -98,7 +105,7 @@ public class ProjectIteration01
 			bmi[count] = calculateBMI(weight, height);
 			do
 			{
-				System.out.print("Enter age in years: ");
+				System.out.print("Enter age in years: " + "\r");
 				age = input.nextInt();
 
 			} while (getValidNumber(age) == false);
