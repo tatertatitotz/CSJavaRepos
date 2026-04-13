@@ -211,4 +211,11 @@ public class ProjectIteration01
 
 		return averageMHR;
 	}
+
+	public static void displayAboveAverage(String[] nameAbove, double[] mhrCheckAbove, double averageCompare)
+	{
+		System.out.print("Athletes above or equal to average MHR: \n");
+		for (int count = 0; count < nameAbove.length; ++count)
+		}
+	}
 }// end class
