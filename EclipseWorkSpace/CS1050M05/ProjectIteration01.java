@@ -158,6 +158,10 @@ public class ProjectIteration01
 		return bmiCategoryName;
 	}
 
+	public static void outsideNormalBMI(String[] nameNoNorm, double[] bmiNoNorm)
+	{
+	}
+
 	public static double calculateAverageMHR(double[] heartRatesForAvg)
 	{
 		double averageMHR = 0;
