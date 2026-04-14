@@ -238,5 +238,17 @@ public class ProjectIteration01
 
 	public static void trainingHeartRate(String[] nameTrain, double[] mhrTrain, Scanner answerInput)
 	{
+		char answer;
+
+		do
+		{
+			System.out.print("Do you want to calculate the training heart rates? (y/n): ");
+			answer = Character.toLowerCase(answerInput.next().charAt(0));
+
+			if (answer != 'y' && answer != 'n')
+			{
+				System.out.println("Error: enter y, Y, n, or N.");
+			}
+		} while (answer != 'y' && answer != 'n');
 	}
 }// end class
