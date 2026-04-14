@@ -40,6 +40,11 @@ public class ProjectIteration01
 		averageMHRMain = calculateAverageMHR(heartRatesMain);
 		calculateHighestMHR(namesMain, heartRatesMain);
 		displayAboveAverage(namesMain, heartRatesMain, averageMHRMain);
+		System.out.print("\n");
+		trainingHeartRate(namesMain, heartRatesMain, inputMain);
+
+		System.out.print("\n**************************************\n" + "Training Program Analysis Complete\n"
+				+ "**************************************\n");
 
 	}// end main
 
@@ -229,5 +234,9 @@ public class ProjectIteration01
 				System.out.println(nameAbove[count]);
 			}
 		}
+	}
+
+	public static void trainingHeartRate(String[] nameTrain, double[] mhrTrain, Scanner answerInput)
+	{
 	}
 }// end class
