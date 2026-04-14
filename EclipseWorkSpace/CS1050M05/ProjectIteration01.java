@@ -5,30 +5,22 @@ public class ProjectIteration01
 	public static void main(String[] args)
 	{
 		Scanner inputMain = new Scanner(System.in);
-//		String[] namesMain;
-//		double[] heartRatesMain;
-//		double[] bmiMain;
+		String[] namesMain;
+		double[] heartRatesMain;
+		double[] bmiMain;
 		double averageMHRMain;
 
 		programOverview();
 
 		System.out.println("**************************************\r\n" + "Athlete Entry\r\n"
 				+ "**************************************");
+		int numberOfAthletes = howManyAthletes(inputMain);
 
-		int numberOfAthletes = 6;// howManyAthletes(inputMain);
+		namesMain = new String[numberOfAthletes];
+		heartRatesMain = new double[numberOfAthletes];
+		bmiMain = new double[numberOfAthletes];
 
-//		namesMain = new String[numberOfAthletes];
-//		heartRatesMain = new double[numberOfAthletes];
-//		bmiMain = new double[numberOfAthletes];
-
-		String[] namesMain =
-		{ "Gregg", "Vivian", "Tabu", "Horus", "Vezzek", "Endren" };
-		double[] heartRatesMain =
-		{ 120, 200, 200, 300, 220, 240 };
-		double[] bmiMain =
-		{ 20, 20, 20, 20, 20, 20 };
-
-		// enterAthleteData(namesMain, bmiMain, heartRatesMain, inputMain);
+		enterAthleteData(namesMain, bmiMain, heartRatesMain, inputMain);
 
 		System.out.println("========== Athlete Summary==========");
 		displayAthleteBMI(namesMain, bmiMain, heartRatesMain);
@@ -77,7 +69,7 @@ public class ProjectIteration01
 
 		do
 		{
-			System.out.println("Enter the number of athletes on the team: \r");
+			System.out.print("Enter the number of athletes on the team: \r");
 			athletes = inputNumber.nextInt();
 		} while (getValidNumber(athletes) == false);
 
@@ -178,10 +170,10 @@ public class ProjectIteration01
 		{
 			if (bmiNoNorm[count] >= 25)
 			{
-				System.out.print("Above Normal: " + nameNoNorm[count]);
+				System.out.println("Above Normal: " + nameNoNorm[count]);
 			} else if (bmiNoNorm[count] < 18.5)
 			{
-				System.out.print("Below Normal: " + nameNoNorm[count]);
+				System.out.println("Below Normal: " + nameNoNorm[count]);
 			} else
 			{
 				++normalBMI;
@@ -189,9 +181,8 @@ public class ProjectIteration01
 		}
 		if (normalBMI == nameNoNorm.length)
 		{
-			System.out.print("No athletes outside of normal range");
+			System.out.println("No athletes outside of normal range");
 		}
-		System.out.println("\n");
 	}
 
 	public static void calculateHighestMHR(String[] nameHigh, double[] mhrHigh)
@@ -261,7 +252,6 @@ public class ProjectIteration01
 				System.out.print("Enter training percentage: \r");
 				trainingPercentage = answerInput.nextDouble();
 
-				getValidNumber(trainingPercentage);
 			} while (getValidNumber(trainingPercentage) == false);
 
 			for (int count = 0; count < nameTrain.length; ++count)
