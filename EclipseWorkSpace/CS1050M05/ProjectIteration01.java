@@ -250,5 +250,26 @@ public class ProjectIteration01
 				System.out.println("Error: enter y, Y, n, or N.");
 			}
 		} while (answer != 'y' && answer != 'n');
+
+		double trainingPercentage;
+		final int TO_PERCENT = 100;
+
+		if (answer == 'y')
+		{
+			do
+			{
+				System.out.print("Enter training percentage: \r");
+				trainingPercentage = answerInput.nextDouble();
+
+				getValidNumber(trainingPercentage);
+			} while (getValidNumber(trainingPercentage) == false);
+
+			for (int count = 0; count < nameTrain.length; ++count)
+			{
+				mhrTrain[count] = mhrTrain[count] * (trainingPercentage / TO_PERCENT);
+
+				System.out.println(nameTrain[count] + " Training Heart Rate: " + mhrTrain[count]);
+			}
+		}
 	}
 }// end class
