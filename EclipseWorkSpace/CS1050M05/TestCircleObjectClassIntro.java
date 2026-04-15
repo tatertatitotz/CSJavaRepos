@@ -7,15 +7,15 @@ public class TestCircleObjectClassIntro
 	/** Main method */
 	public static void main(String[] args)
 	{
-		System.out.println("Class of " + SimpleCircle.getShape());
-		int totalCircles = SimpleCircle.getNumberOfObjects();
+		System.out.println("Class of " + SimpleCircleA.getShape());
+		int totalCircles = SimpleCircleA.getNumberOfObjects();
 		System.out.println("Total number of circles: " + totalCircles);
 
-		SimpleCircle circle1 = new SimpleCircle();
+		SimpleCircleA circle1 = new SimpleCircleA();
 		System.out.println("Total number of circles: " + totalCircles);
 		System.out.println("Circle 1 radius: " + circle1.getRadius() + " area: " + circle1.getArea());
 
-		SimpleCircle circle2 = new SimpleCircle(25);
+		SimpleCircleA circle2 = new SimpleCircleA(25);
 		System.out.println("Total number of circles: " + totalCircles);
 		System.out.println("Circle 1 radius: " + circle2.getRadius() + " area: " + circle2.getArea());
 		System.out.println("Total number of circles: " + totalCircles);
@@ -28,7 +28,7 @@ public class TestCircleObjectClassIntro
 	}
 }
 
-class SimpleCircle
+class SimpleCircleA
 {
 	private double radius;
 
@@ -36,16 +36,16 @@ class SimpleCircle
 	private static String shape = "circle";
 
 	/** Construct a circle with radius 1 */
-	public SimpleCircle()
+	public SimpleCircleA()
 	{
 		radius = 1;
 		numberOfObjects++;
 	}
 
 	// fix the code below.
-	public SimpleCircle(double radius)
+	public SimpleCircleA(double radius)
 	{
-		radius = radius;
+		this.radius = radius;
 		numberOfObjects++;
 	}
 
@@ -57,7 +57,7 @@ class SimpleCircle
 	// fix the code below.
 	public void setRadius(double radius)
 	{
-		radius = radius;
+		this.radius = radius;
 	}
 
 	public double getArea()
