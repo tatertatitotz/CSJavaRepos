@@ -39,6 +39,16 @@ public class TestSimpleCircle
 		rectangle2.setWidth(100); // or circle2.setRadius(100)
 		System.out.println("The area of the rectangle with a width of " + rectangle3.getWidth() + " and a length of "
 				+ rectangle3.getLength() + " is " + rectangle3.getArea());
+
+		Rectangle[] rectangles = new Rectangle[3];
+
+		rectangles[0] = rectangle1;
+		rectangles[1] = rectangle2;
+		rectangles[2] = rectangle3;
+
+		rectangles[2].setLength(400);
+
+		Rectangle.printArrayRectangleInformation(rectangles);
 	}
 }
 
@@ -139,3 +149,13 @@ class Rectangle
 
 	}
 
+	static void printArrayRectangleInformation(Rectangle[] rectangleList)
+	{
+		for (int count = 0; count < rectangleList.length; ++count)
+		{
+			System.out.println("\nRectangle #" + (count + 1) + " has a length of " + rectangleList[count].getLength()
+					+ " and a width of " + rectangleList[count].getWidth() + ". \nIt's area is "
+					+ rectangleList[count].getArea() + " and it's perimeter is " + rectangleList[count].getPerimeter()
+					+ ".");
+		}
+	}
