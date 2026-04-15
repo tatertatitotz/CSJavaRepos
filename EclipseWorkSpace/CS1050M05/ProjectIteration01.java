@@ -26,7 +26,6 @@ public class ProjectIteration01
 		double[] heartRatesMain;
 		double[] bmiMain;
 		double averageMHRMain;
-		char answerTrainingMain;
 
 		// just a basic display for what the program does
 		programOverview();
@@ -66,8 +65,7 @@ public class ProjectIteration01
 		// console separation
 		System.out.print("\n");
 		// asks user if they want to calculate training heart rates (displays them too)
-		answerTrainingMain = displayTrainingHeartRate(namesMain, heartRatesMain, inputMain);
-		displayTrainingHeartRate(namesMain, heartRatesMain, answerTrainingMain, inputMain);
+		displayTrainingHeartRate(namesMain, heartRatesMain, inputMain);
 		// console separation
 		System.out.print("\n**************************************\n" + "Training Program Analysis Complete\n"
 				+ "**************************************\n");
