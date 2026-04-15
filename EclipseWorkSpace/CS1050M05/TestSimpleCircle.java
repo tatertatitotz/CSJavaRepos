@@ -156,6 +156,7 @@ class Rectangle
 
 	}
 
+	// prints each rectangles information
 	static void printArrayRectangleInformation(Rectangle[] rectangleList)
 	{
 		for (int count = 0; count < rectangleList.length; ++count)
@@ -167,6 +168,7 @@ class Rectangle
 		}
 	}
 
+	// goes through each array for the longest length (returns index)
 	static int findLongestLength(Rectangle[] rectangleList)
 	{
 		double longest = 0;
@@ -183,6 +185,7 @@ class Rectangle
 		return indexLength;
 	}
 
+	// goes through each array and sums them all
 	static double sumOfAreas(Rectangle[] rectangleList)
 	{
 		double areas = 0;
