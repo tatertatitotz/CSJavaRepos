@@ -1,3 +1,19 @@
+/*
+ * 	Name: Tat Chock
+ * 	Class: CS1050 (M/W)
+ * 	Description: Project Iteration 01 Design Athlete Trainer Program
+ * 
+ * Allows a user to input custom data for a multitude of athletes
+ * Program calculates Body Mass Index (BMI), BMI Category, and Max Heart Rate (MHR)
+ * BMI Categories are Obese, Overweight, Normal, and Underweight
+ * Displays athlete name, bmi, mhr, and bmi category
+ * Displays all athletes above and below normal bmi category
+ * Displays athletes above or equal to max heart rate
+ * Displays person with highest MHR
+ * Calculates average max heart rate
+ * Displays and Calculates training heart rate
+ */
+
 import java.util.Scanner;
 
 public class ProjectIteration01
@@ -10,6 +26,7 @@ public class ProjectIteration01
 		double[] heartRatesMain;
 		double[] bmiMain;
 		double averageMHRMain;
+		char answerTrainingMain;
 
 		// just a basic display for what the program does
 		programOverview();
@@ -49,14 +66,15 @@ public class ProjectIteration01
 		// console separation
 		System.out.print("\n");
 		// asks user if they want to calculate training heart rates (displays them too)
-		trainingHeartRate(namesMain, heartRatesMain, inputMain);
-
+		answerTrainingMain = displayTrainingHeartRate(namesMain, heartRatesMain, inputMain);
+		displayTrainingHeartRate(namesMain, heartRatesMain, answerTrainingMain, inputMain);
 		// console separation
 		System.out.print("\n**************************************\n" + "Training Program Analysis Complete\n"
 				+ "**************************************\n");
 
 	}// end main
 
+	// displays program function in the console
 	public static void programOverview()
 	{
 		System.out.println("**************************************\n" + "Program Overview\n"
@@ -67,7 +85,14 @@ public class ProjectIteration01
 				+ "Calculates percentage of max heart rate for athlete training goal if needed" + "\n");
 	}
 
-	// checks if the custom ints and doubles aren't 0 or negative for proper inputs.
+	/**
+	 * checks if the number given (checkNumber) is a positive non-zero number
+	 * 
+	 * @param checkNumber is the number that you are checking to be positive (can be
+	 *                    an int or double)
+	 * @return a boolean. True if positive, false it negative or zero. Allows while
+	 *         loop usage.
+	 */
 	public static boolean getValidNumber(double checkNumber)
 	{
 		boolean positiveNumber = true;
@@ -82,6 +107,15 @@ public class ProjectIteration01
 		return positiveNumber;
 	}
 
+	/**
+	 * Prompts user how many Athletes there are to determine how many times the for
+	 * loops in other methods should repeat for. getValidNumber means it must be a
+	 * positive input
+	 * 
+	 * @param inputNumber is the number that you want to give an error message for
+	 *                    when it not positive
+	 * @return int indicating how long the parallel arrays should be
+	 */
 	public static int howManyAthletes(Scanner inputNumber)
 	{
 		int athletes;
@@ -96,6 +130,15 @@ public class ProjectIteration01
 		return athletes;
 	}
 
+	/**
+	 * Allows the user to input custom data like names, weight, height, and age
+	 * Calculates bmi and mhr using other methods Just sets up the parallel arrays
+	 * 
+	 * @param names      is for setting names
+	 * @param bmi        is determined by weight and height
+	 * @param heartRates determined by age
+	 * @param input      a scanner for the custom inputs
+	 */
 	public static void enterAthleteData(String[] names, double[] bmi, double[] heartRates, Scanner input)
 	{
 		// allows the user to assign each athlete a name, weight, height and age.
@@ -134,17 +177,30 @@ public class ProjectIteration01
 		} // end of for loop
 	}// end enterAthleteData
 
-	public static double calculateBMI(double weight, double height)
+	/**
+	 * Calculates BMI using the formula
+	 * 
+	 * @param weight inputed in enterAthleteData
+	 * @param height inputed in enterAthleteData
+	 * @return the fully calculated bmi for the array
+	 */
+	public static double calculateBMI(double weightBMI, double heightBMI)
 	{
 		final int BMI_FACTOR = 703;
 		double finalBMI;
 
 		// bmi formula
-		finalBMI = 703 * weight / Math.pow(height, 2);
+		finalBMI = 703 * weightBMI / Math.pow(heightBMI, 2);
 
 		return finalBMI;
 	}
 
+	/**
+	 * Uses the formula for MHR to calculate MHR
+	 * 
+	 * @param ageMHR is age of athletes
+	 * @return max heart rate
+	 */
 	public static double calculateMHR(double ageMHR)
 	{
 		final int MHR_FACTOR = 220;
@@ -155,6 +211,13 @@ public class ProjectIteration01
 		return mhr;
 	}
 
+	/**
+	 * Just prints the names bmi and mhr of all athletes.
+	 * 
+	 * @param nameBMI    names of athletes
+	 * @param bmiDisplay bmi for athletes
+	 * @param mhrDisplay max heart rates of athletes
+	 */
 	public static void displayAthleteBMI(String[] nameBMI, double[] bmiDisplay, double[] mhrDisplay)
 	{
 		// basic list of athletes and their newly calculated stats (IE: BMI and MHR)
@@ -169,6 +232,15 @@ public class ProjectIteration01
 		}
 	}
 
+	/**
+	 * Determines BMI category based on BMI ranges
+	 * 
+	 * Category Scale: Obese: > 40 Overweight: 39.999 to 25 Normal: 24.999 to 18.5
+	 * Underweight: < 18.499
+	 * 
+	 * @param bmiGiven is the Athletes bmi passed from the array
+	 * @return the category name
+	 */
 	public static String bmiCategory(double bmiGiven)
 	{
 		// categories for BMI ranges
@@ -190,6 +262,18 @@ public class ProjectIteration01
 		return bmiCategoryName;
 	}
 
+	/**
+	 * Displays the names and orientation relative to the normal bmi category
+	 * parameter
+	 * 
+	 * Above Normal: > 25 Below Normal: < 18.4999
+	 * 
+	 * if neither apply and they've gone through every Athlete, it displays that all
+	 * are normal
+	 *
+	 * @param nameNoNorm athlete names
+	 * @param bmiNoNorm  athlete Calculated bmi
+	 */
 	public static void outsideNormalBMI(String[] nameNoNorm, double[] bmiNoNorm)
 	{
 		int normalBMI = 0;
@@ -215,6 +299,13 @@ public class ProjectIteration01
 		}
 	}
 
+	/**
+	 * Determines the person with the highest mhr by sifting through the entire
+	 * array of mhrs
+	 * 
+	 * @param nameHigh is the athletes name
+	 * @param mhrHigh  is all athletes max heart rates
+	 */
 	public static void calculateHighestMHR(String[] nameHigh, double[] mhrHigh)
 	{
 		double highestMHR = 0;
@@ -232,6 +323,12 @@ public class ProjectIteration01
 		System.out.println(nameHigh[indexMHR] + " has highest max heart rate: " + mhrHigh[indexMHR] + "\n");
 	}
 
+	/**
+	 * Calculates average MHR from all the athletes
+	 * 
+	 * @param heartRatesForAvg all athletes max heart rates
+	 * @return
+	 */
 	public static double calculateAverageMHR(double[] heartRatesForAvg)
 	{
 		double averageMHR = 0;
@@ -248,6 +345,14 @@ public class ProjectIteration01
 		return averageMHR;
 	}
 
+	/**
+	 * displays the names of everyone that has a max heart rate higher or equal to
+	 * average max heart rate
+	 * 
+	 * @param nameAbove      names of all the athletes on the team
+	 * @param mhrCheckAbove  max heart rates of all the athletes
+	 * @param averageCompare average of all max heart rates
+	 */
 	public static void displayAboveAverage(String[] nameAbove, double[] mhrCheckAbove, double averageCompare)
 	{
 		System.out.print("Athletes above or equal to average MHR: \n");
@@ -261,7 +366,17 @@ public class ProjectIteration01
 		}
 	}
 
-	public static void trainingHeartRate(String[] nameTrain, double[] mhrTrain, Scanner answerInput)
+	/**
+	 * Asks you if you want to calculate training heart rates. Prompts you with a
+	 * yes or no answer checks if your input is valid (only accepts yes and no)
+	 * Multiplies the given mhr to the percentage defined by the user displays names
+	 * and newly calculated training heart rates
+	 * 
+	 * @param nameTrain   array with all athletes names
+	 * @param mhrTrain    max heart rates names
+	 * @param answerInput scanner to detect
+	 */
+	public static void displayTrainingHeartRate(String[] nameTrain, double[] mhrTrain, Scanner answerInput)
 	{
 		char answer;
 
@@ -278,9 +393,12 @@ public class ProjectIteration01
 			}
 		} while (answer != 'y' && answer != 'n');
 
-		double trainingPercentage;
+		// initialize variables for calculation
 		final int TO_PERCENT = 100;
+		double trainingPercentage;
 
+		// if the answer determined in the first part of this method is yes (y) the
+		// calculation and display runs
 		if (answer == 'y')
 		{
 			do
@@ -296,6 +414,13 @@ public class ProjectIteration01
 
 				System.out.println(nameTrain[count] + " Training Heart Rate: " + mhrTrain[count]);
 			}
+		}
+		// if the answer determined in the first part is NOT y, but instead n (only
+		// other option)
+		// then the method ends.
+		else
+		{
+			return;
 		}
 	}
 }// end class
