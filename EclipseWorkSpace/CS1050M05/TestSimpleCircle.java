@@ -49,6 +49,11 @@ public class TestSimpleCircle
 		rectangles[2].setLength(400);
 
 		Rectangle.printArrayRectangleInformation(rectangles);
+
+		int indexLongestLength = Rectangle.findLongestLength(rectangles);
+
+		System.out.print("The rectangle with the longest length is rectangle #" + (indexLongestLength + 1)
+				+ " with a length of: " + rectangles[indexLongestLength].getLength());
 	}
 }
 
@@ -159,3 +164,20 @@ class Rectangle
 					+ ".");
 		}
 	}
+
+	static int findLongestLength(Rectangle[] rectangleList)
+	{
+		double longest = 0;
+		int indexLength = 0;
+
+		for (int count = 0; count < rectangleList.length; ++count)
+		{
+			if (longest < rectangleList[count].getLength())
+			{
+				longest = rectangleList[count].getLength();
+				indexLength = count;
+			}
+		}
+		return indexLength;
+	}
+
