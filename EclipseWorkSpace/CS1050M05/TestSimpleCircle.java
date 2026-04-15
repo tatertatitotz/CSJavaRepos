@@ -19,6 +19,26 @@ public class TestSimpleCircle
 		// Modify circle radius
 		circle2.setRadius(100); // or circle2.setRadius(100)
 		System.out.println("The area of the circle of radius " + circle2.getRadius() + " is " + circle2.getArea());
+
+		// Create a circle with width/length 1
+		Rectangle rectangle1 = new Rectangle();
+		System.out.println("The area of the rectangle with a width of " + rectangle1.getWidth() + " and a length of "
+				+ rectangle1.getLength() + " is " + rectangle1.getArea());
+
+		// Create a rectangle with a width of 25 and a length of 30
+		Rectangle rectangle2 = new Rectangle(25, 30);
+		System.out.println("The area of the rectangle with a width of " + rectangle2.getWidth() + " and a length of "
+				+ rectangle2.getLength() + " is " + rectangle2.getArea());
+
+		// Create a rectangle with a width of 125 and a length of 250
+		Rectangle rectangle3 = new Rectangle(125, 250);
+		System.out.println("The area of the rectangle with a width of " + rectangle3.getWidth() + " and a length of "
+				+ rectangle3.getLength() + " is " + rectangle3.getArea());
+
+		// Modify rectangle width
+		rectangle2.setWidth(100); // or circle2.setRadius(100)
+		System.out.println("The area of the rectangle with a width of " + rectangle3.getWidth() + " and a length of "
+				+ rectangle3.getLength() + " is " + rectangle3.getArea());
 	}
 }
 
@@ -63,3 +83,59 @@ class SimpleCircle
 		return radius;
 	}// end of getRadius
 }// end class
+
+class Rectangle
+{
+	private double width;
+	private double length;
+
+	/** Construct a rectangle with a width and length of 1 */
+	Rectangle()
+	{
+		width = 1;
+		length = 1;
+	}
+
+	/** Construct a rectangle with a specified width and length */
+	Rectangle(double newWidth, double newLength)
+	{
+		width = newWidth;
+		length = newLength;
+	}
+
+	/** Return the area of this rectangle */
+	double getArea()
+	{
+		return width * length;
+	}
+
+	/** Return the perimeter of this rectangle */
+	double getPerimeter()
+	{
+		return 2 * (width + length);
+	}
+
+	/** Set a new radius for this rectangle */
+	void setWidth(double width)
+	{
+		this.width = width;
+	}// end setWidth Method
+
+	void setLength(double length)
+	{
+		this.length = length;
+	}// end setLength Method
+
+// returns object width
+	double getWidth()
+	{
+		return width;
+
+	}
+
+	double getLength()
+	{
+		return length;
+
+	}
+
