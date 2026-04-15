@@ -54,6 +54,8 @@ public class TestSimpleCircle
 
 		System.out.print("The rectangle with the longest length is rectangle #" + (indexLongestLength + 1)
 				+ " with a length of: " + rectangles[indexLongestLength].getLength());
+
+		System.out.print("The sum of all the rectangles areas is: " + Rectangle.sumOfAreas(rectangles));
 	}
 }
 
@@ -181,3 +183,14 @@ class Rectangle
 		return indexLength;
 	}
 
+	static double sumOfAreas(Rectangle[] rectangleList)
+	{
+		double areas = 0;
+
+		for (int count = 0; count < rectangleList.length; ++count)
+		{
+			areas = areas + rectangleList[count].getArea();
+		}
+		return areas;
+	}
+}
