@@ -1,5 +1,6 @@
 
 //Add Comments to explain concepts from M05 on classes and objects
+import java.io.File;
 
 public class TestCircleObjectClassIntro
 {
