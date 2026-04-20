@@ -128,17 +128,18 @@ public class TrainerProject
 			answer = Character.toUpperCase(askInput.next().charAt(0));
 		}
 
-		boolean completeAnswer;
+		boolean completeAnswer = false;
 
 		// if the answer is yes repeat again
 		if (answer == 'Y')
 		{
 			completeAnswer = true;
-		} else
+		} else if (answer == 'N')
 		{
 			// if it is N
 			completeAnswer = false;
 		}
+
 		return completeAnswer;
 	}
 }
