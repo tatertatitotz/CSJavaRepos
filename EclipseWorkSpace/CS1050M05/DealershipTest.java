@@ -13,6 +13,10 @@ public class DealershipTest
 
 		placeForCars.addCar(car1);
 
+		Car car2 = new Car("Nissan", "Altima", 14500);
+		placeForCars.addCar(car2);
+
+		placeForCars.findMostExpensiveCar().displayCarDetails()
 	}// end main
 
 }// end Dealership Test
