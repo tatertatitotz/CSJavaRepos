@@ -8,6 +8,8 @@ public class DealershipTest
 		System.out.println(car1.getModel());
 		car1.displayCarDetails();
 
+		Dealership placeForCars = new Dealership("Name of Dealership", 2);
+		System.out.println(placeForCars.getDealershipName());
 	}// end main
 
 }// end Dealership Test
