@@ -16,7 +16,11 @@ public class DealershipTest
 		Car car2 = new Car("Nissan", "Altima", 14500);
 		placeForCars.addCar(car2);
 
+		System.out.print("The Most Expensive car is: ");
 		placeForCars.findMostExpensiveCar().displayCarDetails();
+
+		System.out.println("Cars in the dealership are: ");
+		placeForCars.displayCars();
 
 	}// end main
 
@@ -94,5 +98,17 @@ class Dealership
 
 		return cars[carIndex];
 	}
+
+	public void displayCars()
+	{
+		for (int count = 0; count < cars.length; ++count)
+		{
+			cars[count].displayCarDetails();
+		}
+	}
+
+	public void writeCarsToFile()
+	{
+		// no op
 	}
 }
