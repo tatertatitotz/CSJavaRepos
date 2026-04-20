@@ -16,7 +16,8 @@ public class DealershipTest
 		Car car2 = new Car("Nissan", "Altima", 14500);
 		placeForCars.addCar(car2);
 
-		placeForCars.findMostExpensiveCar().displayCarDetails()
+		placeForCars.findMostExpensiveCar().displayCarDetails();
+
 	}// end main
 
 }// end Dealership Test
@@ -76,6 +77,22 @@ class Dealership
 	{
 		cars[currentCars] = newCar;
 		currentCars++;
+	}
+
+	public Car findMostExpensiveCar()
+	{
+		double expensiveCar = 0;
+		int carIndex = 0;
+		for (int count = 0; count < cars.length; ++count)
+		{
+			if (expensiveCar <= cars[count].getPrice())
+			{
+				expensiveCar = cars[count].getPrice();
+				carIndex = count;
+			}
+		}
+
+		return cars[carIndex];
 	}
 	}
 }
