@@ -47,4 +47,12 @@ class Car
 
 class Dealership
 {
+	private String name;
+	private int maxNumberOfCars;
+	private int currentCars;
+
+	public Dealership(String name, int maxNumberOfCars)
+	{
+
+	}
 }
