@@ -25,10 +25,10 @@ public class TestCircleObjectClassIntro
 		// Call the method to print the number of circles
 		// set the radius to a new value
 		// print the area of the thrid circle
-		
+
 		File newFile = new File("test.txt");
-		
-		PrintWriter write =
+
+		// PrintWriter write =
 
 	}
 }
