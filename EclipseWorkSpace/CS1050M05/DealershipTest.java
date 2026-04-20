@@ -10,6 +10,9 @@ public class DealershipTest
 
 		Dealership placeForCars = new Dealership("Name of Dealership", 2);
 		System.out.println(placeForCars.getDealershipName());
+
+		placeForCars.addCar(car1);
+
 	}// end main
 
 }// end Dealership Test
@@ -65,5 +68,10 @@ class Dealership
 		return name;
 	}
 
+	public void addCar(Car newCar)
+	{
+		cars[currentCars] = newCar;
+		currentCars++;
+	}
 	}
 }
