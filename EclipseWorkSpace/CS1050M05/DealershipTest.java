@@ -6,6 +6,7 @@ public class DealershipTest
 	{
 		Car car1 = new Car("Ford", "Mustang", 32800);
 		System.out.println(car1.getModel());
+		car1.displayCarDetails();
 	}// end main
 
 }// end Dealership Test
@@ -38,4 +39,8 @@ class Car
 		return price;
 	}
 
+	public void displayCarDetails()
+	{
+		System.out.println(model + " " + make + " $" + price);
+	}
 }// end Car
