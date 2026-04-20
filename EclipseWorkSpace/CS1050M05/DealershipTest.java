@@ -60,5 +60,10 @@ class Dealership
 		cars = new Car[maxNumberOfCars];
 	}
 
+	public String getDealershipName()
+	{
+		return name;
+	}
+
 	}
 }
