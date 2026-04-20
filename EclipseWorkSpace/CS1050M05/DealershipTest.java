@@ -28,4 +28,14 @@ class Car
 		return model;
 	}
 
+	public String getMake()
+	{
+		return make;
+	}
+
+	public double getPrice()
+	{
+		return price;
+	}
+
 }// end Car
