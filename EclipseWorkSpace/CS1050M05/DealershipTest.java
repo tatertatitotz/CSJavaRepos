@@ -44,3 +44,7 @@ class Car
 		System.out.println(model + " " + make + " $" + price);
 	}
 }// end Car
+
+class Dealership
+{
+}
