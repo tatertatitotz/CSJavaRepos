@@ -70,6 +70,8 @@ public class ProjectIteration01
 		System.out.print("\n**************************************\n" + "Training Program Analysis Complete\n"
 				+ "**************************************\n");
 
+		inputMain.close();
+
 	}// end main
 
 	// displays program function in the console
