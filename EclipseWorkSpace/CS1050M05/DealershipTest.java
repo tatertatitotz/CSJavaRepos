@@ -48,8 +48,8 @@ class Car
 class Dealership
 {
 	private String name;
-	private int maxNumberOfCars;
-	private int currentCars;
+	private Car[] cars;
+	private static int currentCars = 0;
 
 	public Dealership(String name, int maxNumberOfCars)
 	{
