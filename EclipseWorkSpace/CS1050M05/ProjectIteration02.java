@@ -213,6 +213,9 @@ class Athletes
 		this.weight = weight;
 		this.height = height;
 		this.age = age;
+
+		bmi = calculateBMI(weight, height);
+		bmiCategory(bmi);
 	}
 
 	public String getName()
@@ -223,11 +226,9 @@ class Athletes
 	/**
 	 * Calculates BMI using the formula
 	 * 
-	 * @param weight inputed in enterAthleteData
-	 * @param height inputed in enterAthleteData
 	 * @return the fully calculated bmi for the array
 	 */
-	public double calculateBMI()
+	public double calculateBMI(double weight, double height)
 	{
 		final int BMI_FACTOR = 703;
 
@@ -243,10 +244,9 @@ class Athletes
 	 * Category Scale: Obese: > 40 Overweight: 39.999 to 25 Normal: 24.999 to 18.5
 	 * Underweight: < 18.499
 	 * 
-	 * @param bmiGiven is the Athletes bmi passed from the array
 	 * @return the category name
 	 */
-	public String bmiCategory()
+	public String bmiCategory(double bmi)
 	{
 		// categories for BMI ranges
 		String category;
