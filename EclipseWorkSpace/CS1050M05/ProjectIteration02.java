@@ -20,12 +20,7 @@ public class ProjectIteration02
 {
 	public static void main(String[] args)
 	{
-		// variables for methods later in main
-		Scanner inputMain = new Scanner(System.in);
-		String[] namesMain;
-		double[] heartRatesMain;
-		double[] bmiMain;
-		double averageMHRMain;
+		Athletes athlete = new Athletes("George", 200, 67, 30);
 
 		// just a basic display for what the program does
 		programOverview();
@@ -34,12 +29,6 @@ public class ProjectIteration02
 		System.out.println("**************************************\r\n" + "Athlete Entry\r\n"
 				+ "**************************************");
 		// how many athletes are on the team
-		int numberOfAthletes = howManyAthletes(inputMain);
-
-		// sets length of arrays according to # team members
-		namesMain = new String[numberOfAthletes];
-		heartRatesMain = new double[numberOfAthletes];
-		bmiMain = new double[numberOfAthletes];
 
 		// console separation
 		System.out.println("========== Athlete Summary==========");
@@ -50,16 +39,13 @@ public class ProjectIteration02
 		// console separation
 		System.out.println("========== MHR Analysis ==========");
 		// calculates average Max Heart Rate from the team
-		averageMHRMain = calculateAverageMHR(heartRatesMain);
-		calculateHighestMHR(namesMain, heartRatesMain);
+
 		// console separation
 		System.out.print("\n");
 
 		// console separation
 		System.out.print("\n**************************************\n" + "Training Program Analysis Complete\n"
 				+ "**************************************\n");
-
-		inputMain.close();
 
 	}// end main
 
@@ -117,24 +103,6 @@ public class ProjectIteration02
 		} while (getValidNumber(athletes) == false);
 
 		return athletes;
-	}
-
-	/**
-	 * Calculates BMI using the formula
-	 * 
-	 * @param weight inputed in enterAthleteData
-	 * @param height inputed in enterAthleteData
-	 * @return the fully calculated bmi for the array
-	 */
-	public static double calculateBMI(double weightBMI, double heightBMI)
-	{
-		final int BMI_FACTOR = 703;
-		double finalBMI;
-
-		// bmi formula
-		finalBMI = 703 * weightBMI / Math.pow(heightBMI, 2);
-
-		return finalBMI;
 	}
 
 	/**
@@ -236,10 +204,32 @@ class Athletes
 	private double weight;
 	private double height;
 	private double age;
+	private double bmi;
+	private String category;
 
-	Athletes()
+	public Athletes(String name, double weight, double height, double age)
 	{
+		this.name = name;
+		this.weight = weight;
+		this.height = height;
+		this.age = age;
+	}
 
+	/**
+	 * Calculates BMI using the formula
+	 * 
+	 * @param weight inputed in enterAthleteData
+	 * @param height inputed in enterAthleteData
+	 * @return the fully calculated bmi for the array
+	 */
+	public double calculateBMI()
+	{
+		final int BMI_FACTOR = 703;
+
+		// bmi formula
+		bmi = 703 * weight / Math.pow(height, 2);
+
+		return bmi;
 	}
 
 }
