@@ -11,6 +11,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class DealershipTest
 {
@@ -139,20 +140,27 @@ class Dealership
 
 			File fileReference = new File(fileName);
 
-			System.out.print(fileReference.getAbsolutePath());
+			System.out.println(fileReference.getAbsolutePath());
 
 			PrintWriter write = new PrintWriter(fileReference);
 
 			System.out.println("Printing to: " + fileName);
 			for (int count = 0; count < cars.length; ++count)
 			{
-				cars[count].getModel();
-				cars[count].getMake();
-				cars[count].getPrice();
-
 				write.println(cars[count].getModel() + " " + cars[count].getMake() + " $" + cars[count].getPrice());
 			}
 
+			readCarsToFile(fileReference);
+		}
+	}
+
+	public void readCarsToFile(File fileRefRead) throws FileNotFoundException
+	{
+		Scanner fileScanner = new Scanner(fileRefRead);
+
+		while (fileScanner.hasNext())
+		{
+			System.out.print(fileScanner.nextLine());
 		}
 	}
 }
