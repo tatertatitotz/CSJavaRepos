@@ -14,189 +14,93 @@
  * Displays and Calculates training heart rate
  */
 
-import java.util.Scanner;
+import java.io.FileNotFoundException;
 
 public class ProjectIteration02
 {
 	public static void main(String[] args)
 	{
-		Athletes athlete = new Athletes("George", 200, 67, 30);
+		displayProgramSummary();
 
-		// just a basic display for what the program does
-		programOverview();
+		// ===== TEST 1 =====
+		String fileName = "team1.txt";
 
-		// Formatting so the console is easier to read
-		System.out.println("**************************************\r\n" + "Athlete Entry\r\n"
-				+ "**************************************");
-		// how many athletes are on the team
-
-		// console separation
-		System.out.println("========== Athlete Summary==========");
-
-		// console separation
-		System.out.println("========== BMI Analysis ==========");
-
-		// console separation
-		System.out.println("========== MHR Analysis ==========");
-		// calculates average Max Heart Rate from the team
-
-		// console separation
-		System.out.print("\n");
-
-		// console separation
-		System.out.print("\n**************************************\n" + "Training Program Analysis Complete\n"
-				+ "**************************************\n");
-
-	}// end main
-
-	// displays program function in the console
-	public static void programOverview()
-	{
-		System.out.println("**************************************\n" + "Program Overview\n"
-				+ "**************************************\n" + "The trainer enters how many athletes are on the team.\n"
-				+ "Then the trainer enters each athlete's weight, height and age.\n"
-				+ "For each athlete, the program calculates BMI and Max Heart Rate.\n" + "BMI Categories\n"
-				+ "Under 18.5: Underweight\r\n" + "18.5 to under 30: Normal\n" + "30 or greater: High\n" + "\n"
-				+ "Calculates percentage of max heart rate for athlete training goal if needed" + "\n");
-	}
-
-	/**
-	 * checks if the number given (checkNumber) is a positive non-zero number
-	 * 
-	 * @param checkNumber is the number that you are checking to be positive (can be
-	 *                    an int or double)
-	 * @return a boolean. True if positive, false it negative or zero. Allows while
-	 *         loop usage.
-	 */
-	public static boolean getValidNumber(double checkNumber)
-	{
-		boolean positiveNumber = true;
-
-		if (checkNumber <= 0)
+		try
 		{
-			// Error message for clarity
-			System.out.println("Error: Value must be greater than 0.");
-			positiveNumber = false;
+			System.out.println("\nTesting file: " + fileName);
+
+			Team team = new Team("Nuggets", 6);
+
+			teamSetUp(fileName, team);
+
+			runAnalysis(team);
+
+		} catch (FileNotFoundException exception)
+		{
+			System.out.println("Error: Unable to find file " + fileName);
 		}
 
-		return positiveNumber;
-	}
+		// ===== TEST 2 =====
+		fileName = "team2.txt";
 
-	/**
-	 * Prompts user how many Athletes there are to determine how many times the for
-	 * loops in other methods should repeat for. getValidNumber means it must be a
-	 * positive input
-	 * 
-	 * @param inputNumber is the number that you want to give an error message for
-	 *                    when it not positive
-	 * @return int indicating how long the parallel arrays should be
-	 */
-	public static int howManyAthletes(Scanner inputNumber)
-	{
-		int athletes;
-
-		// forces them to repeat until they enter a valid number
-		do
+		try
 		{
-			System.out.print("Enter the number of athletes on the team: \r");
-			athletes = inputNumber.nextInt();
-		} while (getValidNumber(athletes) == false);
+			System.out.println("\nTesting file: " + fileName);
 
-		return athletes;
-	}
+			Team team = new Team("Team CS", 4);
 
-	/**
-	 * Uses the formula for MHR to calculate MHR
-	 * 
-	 * @param ageMHR is age of athletes
-	 * @return max heart rate
-	 */
-	public static double calculateMHR(double ageMHR)
-	{
-		final int MHR_FACTOR = 220;
-		double mhr;
+			teamSetUp(fileName, team);
 
-		// MAX HEART RATE (MHR) formula
-		mhr = MHR_FACTOR - ageMHR;
-		return mhr;
-	}
+			runAnalysis(team);
 
-	/**
-	 * Determines BMI category based on BMI ranges
-	 * 
-	 * Category Scale: Obese: > 40 Overweight: 39.999 to 25 Normal: 24.999 to 18.5
-	 * Underweight: < 18.499
-	 * 
-	 * @param bmiGiven is the Athletes bmi passed from the array
-	 * @return the category name
-	 */
-	public static String bmiCategory(double bmiGiven)
-	{
-		// categories for BMI ranges
-		String bmiCategoryName;
-		if (bmiGiven >= 40)
+		} catch (FileNotFoundException exception)
 		{
-			bmiCategoryName = "Obese";
-		} else if (bmiGiven >= 25)
-		{
-			bmiCategoryName = "Overweight";
-		} else if (bmiGiven >= 18.5)
-		{
-			bmiCategoryName = "Normal";
-		} else
-		{
-			bmiCategoryName = "Underweight";
-		} // end else
-
-		return bmiCategoryName;
-	}
-
-	/**
-	 * Determines the person with the highest mhr by sifting through the entire
-	 * array of mhrs
-	 * 
-	 * @param nameHigh is the athletes name
-	 * @param mhrHigh  is all athletes max heart rates
-	 */
-	public static void calculateHighestMHR(String[] nameHigh, double[] mhrHigh)
-	{
-		double highestMHR = 0;
-		int indexMHR = 0;
-		// finds the index of the person with the highest MHR
-		for (int count = 0; count < nameHigh.length; ++count)
-		{
-			if (highestMHR < mhrHigh[count])
-			{
-				highestMHR = mhrHigh[count];
-				indexMHR = count;
-			}
+			System.out.println("Error: Unable to find file " + fileName);
 		}
-		// prints the name and MHR of the person with the highestMHR
-		System.out.println(nameHigh[indexMHR] + " has highest max heart rate: " + mhrHigh[indexMHR] + "\n");
+
+		System.out.println("\nEnd of program");
 	}
 
-	/**
-	 * Calculates average MHR from all the athletes
-	 * 
-	 * @param heartRatesForAvg all athletes max heart rates
-	 * @return
-	 */
-	public static double calculateAverageMHR(double[] heartRatesForAvg)
+	public static void teamSetUp(String fileName, Team team) throws FileNotFoundException
 	{
-		double averageMHR = 0;
-
-		for (int count = 0; count < heartRatesForAvg.length; ++count)
-		{
-			// sums all the athlete's mhrs
-			averageMHR = averageMHR + heartRatesForAvg[count];
-		}
-		averageMHR = averageMHR / heartRatesForAvg.length;
-
-		System.out.println("Team Average Max Heart Rates: " + averageMHR + "\n");
-
-		return averageMHR;
+		// fill in reading information from a file
 	}
-}// end class
+
+	public static void runAnalysis(Team team) throws FileNotFoundException
+	{
+		System.out.println("\n========== Team Analysis ==========");
+		System.out.println("Team: " + team.getTeamName());
+		System.out.println("Total Athletes: " + team.getAthleteCount());
+		System.out.println();
+
+		team.displayAthleteResults();
+		team.displayAthletesOutsideNormalBMI();
+
+		double avg = team.calculateAverageMaxHeartRate();
+		System.out.println("\nAverage Max Heart Rate: " + avg);
+
+		team.displayAthletesAboveAverageMHR(avg);
+		team.displayHighestMHR();
+		team.displaySmallestLargestHeight();
+		String outputFileName = team.getTeamName() + ".txt";
+		team.writeAthletesToFile(outputFileName);
+
+	}
+
+	// ================= DISPLAY =================
+
+	public static void displayProgramSummary()
+	{
+		System.out.println("**************************************");
+		System.out.println("Team and Athlete Analysis");
+		System.out.println("**************************************");
+		System.out.println("Reads athlete data from file");
+		System.out.println("Displays athlete results");
+		System.out.println("Performs team analysis");
+		System.out.println("Writes results to file");
+		System.out.println();
+	}
+}
 
 class Athletes
 {
@@ -216,6 +120,20 @@ class Athletes
 
 		bmi = calculateBMI(weight, height);
 		bmiCategory(bmi);
+	}
+
+	public static boolean getValidNumber(double checkNumber)
+	{
+		boolean positiveNumber = true;
+
+		if (checkNumber <= 0)
+		{
+			// Error message for clarity
+			System.out.println("Error: Value must be greater than 0.");
+			positiveNumber = false;
+		}
+
+		return positiveNumber;
 	}
 
 	public String getName()
@@ -265,5 +183,17 @@ class Athletes
 		} // end else
 
 		return category;
+	}
+}
+
+class Team
+{
+	private String name;
+	private int athleteCount;
+
+	public Team(String name, int athleteCount)
+	{
+		this.name = name;
+		this.athleteCount = athleteCount;
 	}
 }
