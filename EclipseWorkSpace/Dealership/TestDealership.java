@@ -7,23 +7,32 @@ public class TestDealership
 	{
 		displayProgramSummary();
 		String fileName = "cars1.txt";
+
+		// try this
 		try
 		{
 			System.out.println("\nTesting file: " + fileName);
+			// creates a dealership
 			Dealership dealership = new Dealership("CS Dealership", 6);
+
+			// File name
 			dealershipSetUp(fileName, dealership);
 			dealership.displayCars();
+
 			System.out.println("\nMost Expensive Car:");
 			dealership.displayMostExpensiveCar();
 			String outputFileName = dealership.getDealershipName() + ".txt";
 			dealership.writeCarsToFile(outputFileName);
-		} catch (FileNotFoundException exception)
+		}
+		// when something goes wrong this happens
+		catch (FileNotFoundException exception)
 		{
 			System.out.println("Error: Unable to find file " + fileName);
 		}
 		System.out.println("\nEnd of program");
 	}
 
+	// if something goes wrong in here it throws the following exception
 	public static void dealershipSetUp(String fileName, Dealership newDealership) throws FileNotFoundException
 	{
 		File inputFile = new File(fileName);
