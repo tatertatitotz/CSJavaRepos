@@ -150,7 +150,8 @@ class Dealership
 				write.println(cars[count].getModel() + " " + cars[count].getMake() + " $" + cars[count].getPrice());
 			}
 
-			readCarsToFile(fileReference);
+			write.close();
+			// readCarsToFile(fileReference);
 		}
 	}
 
