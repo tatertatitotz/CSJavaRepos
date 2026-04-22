@@ -1,4 +1,17 @@
 
+/*
+ * Name: Tat Chock
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 public class DealershipTest
 {
 
@@ -16,11 +29,24 @@ public class DealershipTest
 		Car car2 = new Car("Nissan", "Altima", 14500);
 		placeForCars.addCar(car2);
 
+		System.out.print("\n");
+
 		System.out.print("The Most Expensive car is: ");
 		placeForCars.findMostExpensiveCar().displayCarDetails();
 
+		System.out.print("\n");
+
 		System.out.println("Cars in the dealership are: ");
 		placeForCars.displayCars();
+
+		try
+		{
+			placeForCars.writeCarsToFile("Name_Of_Dealership.txt");
+
+		} catch (FileNotFoundException exception)
+		{
+			System.out.print("Unable to find file: " + "Name_Of_Dealership.txt");
+		}
 
 	}// end main
 
@@ -107,8 +133,26 @@ class Dealership
 		}
 	}
 
-	public void writeCarsToFile()
+	public void writeCarsToFile(String fileName) throws FileNotFoundException
 	{
-		// no op
+		{
+
+			File fileReference = new File(fileName);
+
+			System.out.print(fileReference.getAbsolutePath());
+
+			PrintWriter write = new PrintWriter(fileReference);
+
+			System.out.println("Printing to: " + fileName);
+			for (int count = 0; count < cars.length; ++count)
+			{
+				cars[count].getModel();
+				cars[count].getMake();
+				cars[count].getPrice();
+
+				write.println(cars[count].getModel() + " " + cars[count].getMake() + " $" + cars[count].getPrice());
+			}
+
+		}
 	}
 }
