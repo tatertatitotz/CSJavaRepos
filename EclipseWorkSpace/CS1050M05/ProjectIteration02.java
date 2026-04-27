@@ -111,7 +111,7 @@ public class ProjectIteration02
 	}
 }
 
-class Athletes
+class Athlete
 {
 	private String name;
 	private double weight;
@@ -120,7 +120,7 @@ class Athletes
 	private double bmi;
 	private String category;
 
-	public Athletes(String name, double weight, double height, double age)
+	public Athlete(String name, double weight, double height, double age)
 	{
 		this.name = name;
 		this.weight = weight;
@@ -198,6 +198,7 @@ class Athletes
 class Team
 {
 	private String name;
+	private Athlete[] athletes;
 	private int athleteCount;
 
 	public Team(String name, int athleteCount)
@@ -214,5 +215,10 @@ class Team
 	public int getAthleteCount()
 	{
 		return athleteCount;
+	}
+
+	public void addAthlete(Athlete athlete)
+	{
+
 	}
 }
