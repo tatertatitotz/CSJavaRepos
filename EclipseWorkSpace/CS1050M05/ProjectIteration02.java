@@ -159,6 +159,51 @@ class Athlete
 	 * 
 	 * @return the category name
 	 */
+	public String determineBMICategory()
+	{
+		// categories for BMI ranges
+		String bmiCategoryName;
+		if (bmi >= 40)
+		{
+			bmiCategoryName = "Obese";
+		} else if (bmi >= 25)
+		{
+			bmiCategoryName = "Overweight";
+		} else if (bmi >= 18.5)
+		{
+			bmiCategoryName = "Normal";
+		} else
+		{
+			bmiCategoryName = "Underweight";
+		} // end else
+
+		return bmiCategoryName;
+
+	/**
+	 * Uses the formula for MHR to calculate MHR
+	 * 
+	 * @param ageMHR is age of athletes
+	 * @return max heart rate
+	 */
+	public static double calculateMHR()
+	{
+		final int MHR_FACTOR = 220;
+		double mhr;
+
+		// MAX HEART RATE (MHR) formula
+		mhr = MHR_FACTOR - age;
+		return mhr;
+
+	}
+
+	/**
+	 * Determines BMI category based on BMI ranges
+	 * 
+	 * Category Scale: Obese: > 40 Overweight: 39.999 to 25 Normal: 24.999 to 18.5
+	 * Underweight: < 18.499
+	 * 
+	 * @return the category name
+	 */
 	public String bmiCategory(double bmi)
 	{
 		// categories for BMI ranges
