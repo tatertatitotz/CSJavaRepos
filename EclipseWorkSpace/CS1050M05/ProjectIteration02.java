@@ -141,7 +141,7 @@ class Athlete
 	 * 
 	 * @return the fully calculated bmi for the array
 	 */
-	public double calculateBMI(double weight, double height)
+	public double calculateBMI()
 	{
 		final int BMI_FACTOR = 703;
 
