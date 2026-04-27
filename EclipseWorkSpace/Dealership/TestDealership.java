@@ -33,6 +33,14 @@ public class TestDealership
 	}
 
 	// if something goes wrong in here it throws the following exception
+
+	/**
+	 * Reads from an external file to import the data to the online dealership
+	 * 
+	 * @param fileName      car1.txt
+	 * @param newDealership dealership for car storage
+	 * @throws FileNotFoundException
+	 */
 	public static void dealershipSetUp(String fileName, Dealership newDealership) throws FileNotFoundException
 	{
 		File inputFile = new File(fileName);
