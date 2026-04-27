@@ -14,7 +14,9 @@
  * Displays and Calculates training heart rate
  */
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class ProjectIteration02
 {
@@ -64,6 +66,14 @@ public class ProjectIteration02
 	public static void teamSetUp(String fileName, Team team) throws FileNotFoundException
 	{
 		// fill in reading information from a file
+		File fileReference = new File(fileName);
+
+		Scanner reader = new Scanner(fileReference);
+
+		while (reader.hasNext())
+		{
+
+		}
 	}
 
 	public static void runAnalysis(Team team) throws FileNotFoundException
