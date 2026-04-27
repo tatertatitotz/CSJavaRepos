@@ -106,8 +106,14 @@ class Dealership
 
 	public void addCar(Car newCar)
 	{
-		cars[currentCars] = newCar;
-		currentCars++;
+		if (currentCars < cars.length)
+		{
+			cars[currentCars] = newCar;
+			currentCars++;
+		} else if (currentCars >= cars.length)
+		{
+			System.out.print("Dealership is full.");
+		}
 	}
 
 	public Car findMostExpensiveCar()
