@@ -71,7 +71,8 @@ public class ProjectIteration02
 
 		while (reader.hasNext())
 		{
-
+			Athlete athlete = new Athlete(reader.next(), reader.nextDouble(), reader.nextDouble(), reader.nextInt());
+			team.addAthlete(athlete);
 		}
 	}
 
@@ -119,6 +120,7 @@ class Athlete
 	private double age;
 	private double bmi;
 	private String category;
+	private double mhr;
 
 	public Athlete(String name, double weight, double height, double age)
 	{
@@ -231,11 +233,13 @@ class Team
 	private String name;
 	private Athlete[] athletes;
 	private int athleteCount;
+	private static int numberOfAthletes = 0;
 
 	public Team(String name, int athleteCount)
 	{
 		this.name = name;
 		this.athleteCount = athleteCount;
+		athletes = new Athlete[athleteCount];
 	}
 
 	public String getTeamName()
@@ -250,6 +254,10 @@ class Team
 
 	public void addAthlete(Athlete athlete)
 	{
+		this.athletes[numberOfAthletes] = athlete;
+		++numberOfAthletes;
+	}
+
 
 	}
 }
