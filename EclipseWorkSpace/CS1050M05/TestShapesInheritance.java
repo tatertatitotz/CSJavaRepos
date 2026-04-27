@@ -18,8 +18,11 @@ public class TestShapesInheritance
 
 		CircleFromSimpleGeometricShape circle2 = new CircleFromSimpleGeometricShape(1);
 		circle2.setColor("blue");
-
+		
+		
 		SimpleGeometricShape shape = new SimpleGeometricShape("sploogy green", true);
+		
+		shape.
 		// when a class is inherited, casting is something you probably rarely do.
 		((CircleFromSimpleGeometricShape) shape).setRadius(3.14159);
 
@@ -61,6 +64,12 @@ class SimpleGeometricShape
 		dateCreated = new java.util.Date();
 		this.color = color;
 		this.filled = filled;
+	}
+
+	@Override
+	public String toString() {
+		System.out.print(filled);
+		return "created" + dateCreated;s
 	}
 
 	/**
