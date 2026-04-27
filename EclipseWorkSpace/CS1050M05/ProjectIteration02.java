@@ -65,7 +65,6 @@ public class ProjectIteration02
 
 	public static void teamSetUp(String fileName, Team team) throws FileNotFoundException
 	{
-		// fill in reading information from a file
 		File fileReference = new File(fileName);
 
 		Scanner reader = new Scanner(fileReference);
@@ -205,5 +204,15 @@ class Team
 	{
 		this.name = name;
 		this.athleteCount = athleteCount;
+	}
+
+	public String getTeamName()
+	{
+		return name;
+	}
+
+	public int getAthleteCount()
+	{
+		return athleteCount;
 	}
 }
