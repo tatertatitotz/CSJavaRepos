@@ -258,6 +258,11 @@ class Team
 		++numberOfAthletes;
 	}
 
+	public void displayAthleteResults()
+	{
+		for (int count = 0; count < athletes.length; ++count)
+		{
 
+		}
 	}
 }
