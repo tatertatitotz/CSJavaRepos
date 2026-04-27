@@ -131,20 +131,6 @@ class Athlete
 		bmiCategory(bmi);
 	}
 
-	public static boolean getValidNumber(double checkNumber)
-	{
-		boolean positiveNumber = true;
-
-		if (checkNumber <= 0)
-		{
-			// Error message for clarity
-			System.out.println("Error: Value must be greater than 0.");
-			positiveNumber = false;
-		}
-
-		return positiveNumber;
-	}
-
 	public String getName()
 	{
 		return name;
