@@ -375,6 +375,8 @@ class Team
 			System.out.println("Printing to: " + fileName);
 			for (int count = 0; count < athletes.length; ++count)
 			{
+				write.println("Name: " + name + "\n" + "BMI: " + athletes[count].calculateBMI() + "\n" + "Category: "
+						+ athletes[count].bmiCategory() + "\n" + "MHR: " + athletes[count].calculateMHR());
 			}
 
 			write.close();
