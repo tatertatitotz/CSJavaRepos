@@ -8,10 +8,13 @@
  * BMI Categories are Obese, Overweight, Normal, and Underweight
  * Displays athlete name, bmi, mhr, and bmi category
  * Displays all athletes above and below normal bmi category
- * Displays athletes above or equal to max heart rate
- * Displays person with highest MHR
  * Calculates average max heart rate
- * Displays and Calculates training heart rate
+ * Displays athletes above or equal to average max heart rate
+ * Displays person with highest MHR
+ * Displays shortest and tallest athletes on a team
+ * Writes the data (Names, BMI, Category, MHR) to a file named with the following convention:
+ * [teamName].txt
+ * Also displays the file path for the athlete data
  */
 
 import java.io.File;
@@ -30,7 +33,7 @@ public class ProjectIteration02
 
 		try
 		{
-			System.out.println("\nTesting file: " + fileName);
+			System.out.println("Testing file: " + fileName);
 
 			Team team = new Team("Nuggets", 6);
 
@@ -90,7 +93,7 @@ public class ProjectIteration02
 		team.displayAthletesOutsideNormalBMI();
 
 		double avg = team.calculateAverageMHR();
-		System.out.println("\nAverage Max Heart Rate: " + avg);
+		System.out.println("\nAverage Max Heart Rate: " + avg + "\n");
 
 		team.displayAthletesAboveAverageMHR(avg);
 		team.displayHighestMHR();
