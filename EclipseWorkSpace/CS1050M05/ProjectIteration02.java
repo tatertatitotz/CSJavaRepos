@@ -402,7 +402,7 @@ class Team
 
 			write.close();
 
-			System.out.print("Results written to file: " + fileReference.getAbsolutePath());
+			System.out.print("Results written to file: " + fileReference.getAbsolutePath() + "\n");
 		}
 	}
 }
