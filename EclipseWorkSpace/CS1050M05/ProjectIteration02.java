@@ -349,6 +349,16 @@ class Team
 	public int calculateSmallestHeightIndex()
 	{
 		int index = 0;
+		// finds the index of the person with the highest MHR
+		for (int count = 0; count < athletes.length - 1; ++count)
+		{
+			double height = athletes[0].getHeight();
+			if (height >= athletes[count + 1].getHeight())
+			{
+				height = athletes[count + 1].getHeight();
+				index = count + 1;
+			}
+		}
 		return index;
 	}
 
