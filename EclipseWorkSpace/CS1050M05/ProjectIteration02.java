@@ -399,7 +399,7 @@ class Team
 			for (int count = 0; count < athletes.length; ++count)
 			{
 				write.println("Name: " + name + "\n" + "BMI: " + athletes[count].calculateBMI() + "\n" + "Category: "
-						+ athletes[count].bmiCategory() + "\n" + "MHR: " + athletes[count].calculateMHR());
+						+ athletes[count].bmiCategory() + "\n" + "MHR: " + athletes[count].calculateMHR() + "\n");
 			}
 
 			write.close();
