@@ -334,11 +334,7 @@ class Team
 		}
 	}
 
-	/**
-	 * Determines the person with the highest mhr by sifting through the entire
-	 * array of mhrs
-	 */
-	public void calculateHighestMHR()
+	public int calculateHighestMHRIndex()
 	{
 		double highestMHR = 0;
 		int index = 0;
@@ -352,6 +348,16 @@ class Team
 				index = count;
 			}
 		}
+		return index;
+	}
+
+	/**
+	 * Determines the person with the highest mhr by sifting through the entire
+	 * array of mhrs
+	 */
+	public void displayHighestMHR()
+	{
+		int index = calculateHighestMHRIndex();
 		// prints the name and MHR of the person with the highestMHR
 		System.out.println(
 				athletes[index].getName() + " has highest max heart rate: " + athletes[index].calculateMHR() + "\n");
