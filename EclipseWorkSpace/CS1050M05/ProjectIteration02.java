@@ -16,6 +16,7 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class ProjectIteration02
@@ -391,6 +392,10 @@ class Team
 
 	public void displaySmallestLargestHeight()
 	{
+	public void writeAthletesToFile(String fileName)
+	{
+		File fileReference = new File(fileName);
+		}
 
 	}
 }
