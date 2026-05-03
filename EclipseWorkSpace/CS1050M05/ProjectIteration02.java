@@ -288,8 +288,6 @@ class Team
 		}
 		averageMHR = averageMHR / athletes.length;
 
-		System.out.println("Team Average Max Heart Rates: " + averageMHR + "\n");
-
 		return averageMHR;
 	}
 
