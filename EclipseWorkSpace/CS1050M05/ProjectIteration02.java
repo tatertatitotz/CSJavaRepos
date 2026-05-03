@@ -86,7 +86,7 @@ public class ProjectIteration02
 		team.displayAthleteResults();
 		team.displayAthletesOutsideNormalBMI();
 
-		double avg = team.calculateAverageMaxHeartRate();
+		double avg = team.calculateAverageMHR();
 		System.out.println("\nAverage Max Heart Rate: " + avg);
 
 		team.displayAthletesAboveAverageMHR(avg);
@@ -118,9 +118,6 @@ class Athlete
 	private double weight;
 	private double height;
 	private static double age;
-	private double bmi;
-	private String category;
-	private double mhr;
 
 	public Athlete(String name, double weight, double height, double age)
 	{
@@ -128,9 +125,6 @@ class Athlete
 		this.weight = weight;
 		this.height = height;
 		this.age = age;
-
-		bmi = calculateBMI(weight, height);
-		bmiCategory(bmi);
 	}
 
 	public String getName()
@@ -224,6 +218,12 @@ class Athlete
 		} // end else
 
 		return category;
+	}
+
+	public void displayAthleteAnalysis()
+	{
+		System.out.println("Name: " + name + "\n" + "BMI: " + calculateBMI() + "\n" + "Category: "
+				+ bmiCategory(calculateBMI()) + "\n" + "MHR: " + calculateMHR());
 	}
 }
 
