@@ -157,6 +157,8 @@ class Athlete
 	 */
 	public String determineBMICategory()
 	{
+		double bmi = calculateBMI();
+		String category = "";
 		if (bmi >= 40)
 		{
 			category = "Obese";
