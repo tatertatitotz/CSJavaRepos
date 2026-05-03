@@ -132,6 +132,11 @@ class Athlete
 		return name;
 	}
 
+	public double getHeight()
+	{
+		return height;
+	}
+
 	/**
 	 * Calculates BMI using the formula
 	 * 
@@ -370,6 +375,18 @@ class Team
 	public int calculateLargestHeightIndex()
 	{
 
+		double height = 0;
+		int index = 0;
+		// finds the index of the person with the highest MHR
+		for (int count = 0; count < athletes.length; ++count)
+		{
+			if (height < athletes[count].getHeight())
+			{
+				height = athletes[count].getHeight();
+				index = count;
+			}
+		}
+		return index;
 	}
 
 	public void displaySmallestLargestHeight()
