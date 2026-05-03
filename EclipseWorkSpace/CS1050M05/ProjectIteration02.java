@@ -362,4 +362,18 @@ class Team
 		System.out.println(
 				athletes[index].getName() + " has highest max heart rate: " + athletes[index].calculateMHR() + "\n");
 	}
+
+	public int calculateSmallestHeightIndex()
+	{
+	}
+
+	public int calculateLargestHeightIndex()
+	{
+
+	}
+
+	public void displaySmallestLargestHeight()
+	{
+
+	}
 }
