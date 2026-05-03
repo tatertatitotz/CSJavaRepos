@@ -319,15 +319,16 @@ class Team
 	/**
 	 * displays the names of everyone that has a max heart rate higher or equal to
 	 * average max heart rate
+	 * 
+	 * @param average is taken from calculateAverageMHR
 	 */
-	public void displayAthletesAboveAverageMHR()
+	public void displayAthletesAboveAverageMHR(double average)
 	{
-		double averageMHR = calculateAverageMHR();
 		System.out.print("Athletes above or equal to average MHR: \n");
 		for (int count = 0; count < athletes.length; ++count)
 		{
 			// prints and athletes name if they are above or equal to averageMHR
-			if (athletes[count].calculateMHR() >= averageMHR)
+			if (athletes[count].calculateMHR() >= average)
 			{
 				System.out.println(athletes[count].getName());
 			}
