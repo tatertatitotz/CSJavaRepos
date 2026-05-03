@@ -260,6 +260,10 @@ class Team
 	 */
 	public void addAthlete(Athlete athlete)
 	{
+		if (numberOfAthletes > athleteCount)
+		{
+			numberOfAthletes = 0;
+		}
 		this.athletes[numberOfAthletes] = athlete;
 		++numberOfAthletes;
 	}
