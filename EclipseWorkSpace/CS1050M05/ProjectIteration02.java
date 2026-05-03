@@ -371,6 +371,11 @@ class Team
 		System.out.println("\nHighest Max Heart Rate: \n" + athlete.getName() + ": " + athlete.calculateMHR() + "\n");
 	}
 
+	/**
+	 * determines the athlete with the smallest height
+	 * 
+	 * @return the shortest athlete's data
+	 */
 	public Athlete calculateShortestAthlete()
 	{
 		int index = 0;
@@ -387,6 +392,11 @@ class Team
 		return athletes[index];
 	}
 
+	/**
+	 * determines the athlete with the largest height
+	 * 
+	 * @return the tallest athlete's data
+	 */
 	public Athlete calculateTallestAthlete()
 	{
 		double height = 0;
@@ -403,6 +413,9 @@ class Team
 		return athletes[index];
 	}
 
+	/**
+	 * Displays both the name and height of the shortest and tallest athletes
+	 */
 	public void displaySmallestLargestHeight()
 	{
 		Athlete shortest = calculateShortestAthlete();
@@ -411,6 +424,15 @@ class Team
 		System.out.println("Tallest Athlete: \n" + tallest.getName() + " - " + tallest.getHeight() + "\n");
 	}
 
+	/**
+	 * Writes all the athlete data like Name, BMI, Category, and MHR for all
+	 * athletes on the team to a separate txt file stored on their computer. It also
+	 * tells the user which path to find the file at.
+	 * 
+	 * @param fileName so you can create a file on the users computer
+	 * @throws FileNotFoundException in case an error occurs, it will allow to user
+	 *                               to know
+	 */
 	public void writeAthletesToFile(String fileName) throws FileNotFoundException
 	{
 		{
