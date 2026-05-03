@@ -157,34 +157,6 @@ class Athlete
 	}
 
 	/**
-	 * Determines BMI category based on BMI ranges
-	 * 
-	 * Category Scale: Obese: > 40 Overweight: 39.999 to 25 Normal: 24.999 to 18.5
-	 * Underweight: < 18.499
-	 * 
-	 * @return the category name
-	 */
-	public String determineBMICategory()
-	{
-		String category = "";
-		if (bmi >= 40)
-		{
-			category = "Obese";
-		} else if (bmi >= 25)
-		{
-			category = "Overweight";
-		} else if (bmi >= 18.5)
-		{
-			category = "Normal";
-		} else
-		{
-			category = "Underweight";
-		} // end else
-
-		return category;
-	}
-
-	/**
 	 * Uses the formula for MHR to calculate MHR
 	 * 
 	 * @param ageMHR is age of athletes
