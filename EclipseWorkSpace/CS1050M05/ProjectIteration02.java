@@ -341,7 +341,10 @@ class Team
 		}
 	}
 
-	public int calculateHighestMHRIndex()
+	/**
+	 * @return
+	 */
+	public Athlete calculateHighestMHRIndex()
 	{
 		double highestMHR = 0;
 		int index = 0;
@@ -354,7 +357,7 @@ class Team
 				index = count;
 			}
 		}
-		return index;
+		return athletes[index];
 	}
 
 	/**
@@ -363,10 +366,9 @@ class Team
 	 */
 	public void displayHighestMHR()
 	{
-		int index = calculateHighestMHRIndex();
+		Athlete athlete = calculateHighestMHRIndex();
 		// prints the name and MHR of the person with the highestMHR
-		System.out.println("\nHighest Max Heart Rate: \n" + athletes[index].getName() + ": "
-				+ athletes[index].calculateMHR() + "\n");
+		System.out.println("\nHighest Max Heart Rate: \n" + athlete.getName() + ": " + athlete.calculateMHR() + "\n");
 	}
 
 	public int calculateSmallestHeightIndex()
