@@ -395,6 +395,9 @@ class Team
 	public void writeAthletesToFile(String fileName)
 	{
 		File fileReference = new File(fileName);
+
+		System.out.println(fileReference.getAbsolutePath());
+
 		}
 
 	}
