@@ -261,7 +261,74 @@ class Team
 	{
 		for (int count = 0; count < athletes.length; ++count)
 		{
+			athletes[count].displayAthleteAnalysis();
+		}
+	}
 
+	public void displayAthletesOutsideNormalBMI()
+	{
+		int normalBMI = 0;
+
+		for (int count = 0; count < athletes.length; ++count)
+		{
+			double bmi = athletes[count].calculateBMI();
+			// different messages depending on if the athlete is above or below normal BMI
+			if (bmi >= 25)
+			{
+				System.out.println("Above Normal: " + athletes[count].getName());
+			} else if (bmi < 18.5)
+			{
+				System.out.println("Below Normal: " + athletes[count].getName());
+			} else
+			{
+				++normalBMI;
+			}
+		}
+		// if all of them are within normal this is run
+		if (normalBMI == athletes.length)
+		{
+			System.out.println("No athletes outside of normal range");
+		}
+		System.out.print("\n");
+	}
+
+	/**
+	 * Calculates average MHR from all the athletes
+	 * 
+	 * @return
+	 */
+	public double calculateAverageMHR()
+	{
+		double averageMHR = 0;
+
+		for (int count = 0; count < athletes.length; ++count)
+		{
+			// sums all the athlete's mhrs
+			averageMHR = averageMHR + athletes[count].calculateMHR();
+		}
+		averageMHR = averageMHR / athletes.length;
+
+		System.out.println("Team Average Max Heart Rates: " + averageMHR + "\n");
+
+		return averageMHR;
+	}
+
+	/**
+	 * displays the names of everyone that has a max heart rate higher or equal to
+	 * average max heart rate
+	 * 
+	 */
+	public void displayAthletesAboveAverageMHR()
+	{
+		double averageMHR = calculateAverageMHR();
+		System.out.print("Athletes above or equal to average MHR: \n");
+		for (int count = 0; count < athletes.length; ++count)
+		{
+			// prints and athletes name if they are above or equal to averageMHR
+			if (athletes[count].calculateMHR() >= averageMHR)
+			{
+				System.out.println(athletes[count].getName());
+			}
 		}
 	}
 }
