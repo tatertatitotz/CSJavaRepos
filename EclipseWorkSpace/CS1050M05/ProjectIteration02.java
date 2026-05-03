@@ -366,7 +366,10 @@ class Team
 
 	public void displaySmallestLargestHeight()
 	{
-		calculateSmallestHeightIndex();
+		System.out.println("Shortest Athlete: \n" + athletes[calculateSmallestHeightIndex()].getName() + " - "
+				+ athletes[calculateSmallestHeightIndex()].getHeight());
+		System.out.println("Tallest Athlete: \n" + athletes[calculateLargestHeightIndex()].getName() + " - "
+				+ athletes[calculateLargestHeightIndex()].getHeight());
 	}
 
 	public void writeAthletesToFile(String fileName) throws FileNotFoundException
