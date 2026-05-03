@@ -139,6 +139,7 @@ class Athlete
 	 */
 	public double calculateBMI()
 	{
+		double bmi;
 		final int BMI_FACTOR = 703;
 
 		// bmi formula
