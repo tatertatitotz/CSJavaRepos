@@ -208,6 +208,9 @@ class Athlete
 		return category;
 	}
 
+	/**
+	 * Displays the name, bmi, bmiCategory, and MHR of the athlete
+	 */
 	public void displayAthleteAnalysis()
 	{
 		System.out.println("Name: " + name + "\n" + "BMI: " + calculateBMI() + "\n" + "Category: " + bmiCategory()
@@ -229,22 +232,38 @@ class Team
 		athletes = new Athlete[athleteCount];
 	}
 
+	/**
+	 * gets the team name
+	 * 
+	 * @return the name of the team that was given in the constructor
+	 */
 	public String getTeamName()
 	{
 		return name;
 	}
 
+	/**
+	 * @return the number of athletes on the team
+	 */
 	public int getAthleteCount()
 	{
 		return athleteCount;
 	}
 
+	/**
+	 * adds athletes and increments through the array to prevent overlap.
+	 * 
+	 * @param takes an athlete to add to the athlete list/array
+	 */
 	public void addAthlete(Athlete athlete)
 	{
 		this.athletes[numberOfAthletes] = athlete;
 		++numberOfAthletes;
 	}
 
+	/**
+	 * Displays each athlete's stats: Name, BMI, Category, MHR
+	 */
 	public void displayAthleteResults()
 	{
 		for (int count = 0; count < athletes.length; ++count)
@@ -253,6 +272,9 @@ class Team
 		}
 	}
 
+	/**
+	 * Displays the names of the athletes who are not within normal bmi range.
+	 */
 	public void displayAthletesOutsideNormalBMI()
 	{
 		System.out.println("Athletes Outside Normal BMI Range:");
@@ -283,7 +305,8 @@ class Team
 	/**
 	 * Calculates average MHR from all the athletes
 	 * 
-	 * @return
+	 * @return average max heart rate so displayAthletesAboveAverageMHR can use it
+	 *         for reference
 	 */
 	public double calculateAverageMHR()
 	{
