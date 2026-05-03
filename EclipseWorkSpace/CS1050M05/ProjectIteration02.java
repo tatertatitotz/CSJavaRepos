@@ -119,6 +119,9 @@ class Athlete
 	private double weight;
 	private double height;
 	private double age;
+	private double bmi = calculateBMI();
+	private String category = bmiCategory();
+	private double mhr;
 
 	public Athlete(String name, double weight, double height, double age)
 	{
@@ -145,7 +148,6 @@ class Athlete
 	 */
 	public double calculateBMI()
 	{
-		double bmi;
 		final int BMI_FACTOR = 703;
 
 		// bmi formula
@@ -164,7 +166,6 @@ class Athlete
 	 */
 	public String determineBMICategory()
 	{
-		double bmi = calculateBMI();
 		String category = "";
 		if (bmi >= 40)
 		{
@@ -192,12 +193,10 @@ class Athlete
 	public double calculateMHR()
 	{
 		final int MHR_FACTOR = 220;
-		double mhr;
 
 		// MAX HEART RATE (MHR) formula
 		mhr = MHR_FACTOR - age;
 		return mhr;
-
 	}
 
 	/**
@@ -208,10 +207,9 @@ class Athlete
 	 * 
 	 * @return the category name
 	 */
-	public String bmiCategory(double bmi)
+	public String bmiCategory()
 	{
 		// categories for BMI ranges
-		String category;
 		if (bmi >= 40)
 		{
 			category = "Obese";
@@ -231,8 +229,8 @@ class Athlete
 
 	public void displayAthleteAnalysis()
 	{
-		System.out.println("Name: " + name + "\n" + "BMI: " + calculateBMI() + "\n" + "Category: "
-				+ bmiCategory(calculateBMI()) + "\n" + "MHR: " + calculateMHR());
+		System.out.println(
+				"Name: " + name + "\n" + "BMI: " + bmi + "\n" + "Category: " + category + "\n" + "MHR: " + mhr);
 	}
 }
 
