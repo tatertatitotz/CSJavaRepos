@@ -346,6 +346,8 @@ class Team
 
 	public int calculateSmallestHeightIndex()
 	{
+		int index = 0;
+		return index;
 	}
 
 	public int calculateLargestHeightIndex()
