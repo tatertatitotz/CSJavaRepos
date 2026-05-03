@@ -342,8 +342,8 @@ class Team
 	{
 		int index = calculateHighestMHRIndex();
 		// prints the name and MHR of the person with the highestMHR
-		System.out.println(
-				athletes[index].getName() + " has highest max heart rate: " + athletes[index].calculateMHR() + "\n");
+		System.out.println("Higehst Max Heart Rate: \n" + athletes[index].getName() + ": "
+				+ athletes[index].calculateMHR() + "\n");
 	}
 
 	public int calculateSmallestHeightIndex()
