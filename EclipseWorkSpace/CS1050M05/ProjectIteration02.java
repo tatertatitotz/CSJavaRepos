@@ -79,7 +79,7 @@ public class ProjectIteration02
 
 	public static void runAnalysis(Team team) throws FileNotFoundException
 	{
-		System.out.println("\n========== Team Analysis ==========");
+		System.out.println("\n========== Athlete Summary ==========");
 		System.out.println("Team: " + team.getTeamName());
 		System.out.println("Total Athletes: " + team.getAthleteCount());
 		System.out.println();
@@ -90,6 +90,7 @@ public class ProjectIteration02
 		double avg = team.calculateAverageMHR();
 		System.out.println("\nAverage Max Heart Rate: " + avg);
 
+		System.out.println("========== Team Analysis ==========");
 		team.displayAthletesAboveAverageMHR(avg);
 		team.displayHighestMHR();
 		team.displaySmallestLargestHeight();
@@ -253,6 +254,7 @@ class Team
 
 	public void displayAthletesOutsideNormalBMI()
 	{
+		System.out.println("Athletes Outside Normal BMI Range:");
 		int normalBMI = 0;
 
 		for (int count = 0; count < athletes.length; ++count)
