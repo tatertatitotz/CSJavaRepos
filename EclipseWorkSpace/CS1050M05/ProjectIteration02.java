@@ -344,7 +344,6 @@ class Team
 
 	public int calculateLargestHeightIndex()
 	{
-
 		double height = 0;
 		int index = 0;
 		// finds the index of the person with the highest MHR
@@ -361,13 +360,24 @@ class Team
 
 	public void displaySmallestLargestHeight()
 	{
-	public void writeAthletesToFile(String fileName)
+		calculateSmallestHeightIndex();
+	}
+
+	public void writeAthletesToFile(String fileName) throws FileNotFoundException
 	{
-		File fileReference = new File(fileName);
+		{
+			File fileReference = new File(fileName);
 
-		System.out.println(fileReference.getAbsolutePath());
+			System.out.println(fileReference.getAbsolutePath());
 
+			PrintWriter write = new PrintWriter(fileReference);
+
+			System.out.println("Printing to: " + fileName);
+			for (int count = 0; count < athletes.length; ++count)
+			{
+			}
+
+			write.close();
 		}
-
 	}
 }
