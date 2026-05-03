@@ -94,7 +94,13 @@ public class ProjectIteration02
 		team.displayHighestMHR();
 		team.displaySmallestLargestHeight();
 		String outputFileName = team.getTeamName() + ".txt";
-		team.writeAthletesToFile(outputFileName);
+		try
+		{
+			team.writeAthletesToFile(outputFileName);
+		} catch (FileNotFoundException exception)
+		{
+			System.out.print("File Not Found");
+		}
 
 	}
 
