@@ -339,7 +339,6 @@ class Team
 	{
 		double highestMHR = 0;
 		int index = 0;
-		double mhr = 0;
 		// finds the index of the person with the highest MHR
 		for (int count = 0; count < athletes.length; ++count)
 		{
