@@ -371,7 +371,7 @@ class Team
 		System.out.println("\nHighest Max Heart Rate: \n" + athlete.getName() + ": " + athlete.calculateMHR() + "\n");
 	}
 
-	public int calculateSmallestHeightIndex()
+	public Athlete calculateShortestAthlete()
 	{
 		int index = 0;
 		// finds the index of the person with the highest MHR
@@ -384,10 +384,10 @@ class Team
 				index = count + 1;
 			}
 		}
-		return index;
+		return athletes[index];
 	}
 
-	public int calculateLargestHeightIndex()
+	public Athlete calculateTallestAthlete()
 	{
 		double height = 0;
 		int index = 0;
@@ -400,15 +400,15 @@ class Team
 				index = count;
 			}
 		}
-		return index;
+		return athletes[index];
 	}
 
 	public void displaySmallestLargestHeight()
 	{
-		System.out.println("Shortest Athlete: \n" + athletes[calculateSmallestHeightIndex()].getName() + " - "
-				+ athletes[calculateSmallestHeightIndex()].getHeight());
-		System.out.println("Tallest Athlete: \n" + athletes[calculateLargestHeightIndex()].getName() + " - "
-				+ athletes[calculateLargestHeightIndex()].getHeight() + "\n");
+		Athlete shortest = calculateShortestAthlete();
+		Athlete tallest = calculateTallestAthlete();
+		System.out.println("Shortest Athlete: \n" + shortest.getName() + " - " + shortest.getHeight());
+		System.out.println("Tallest Athlete: \n" + tallest.getName() + " - " + tallest.getHeight() + "\n");
 	}
 
 	public void writeAthletesToFile(String fileName) throws FileNotFoundException
