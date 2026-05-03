@@ -85,12 +85,13 @@ public class ProjectIteration02
 		System.out.println();
 
 		team.displayAthleteResults();
+
+		System.out.println("========== Team Analysis ==========");
 		team.displayAthletesOutsideNormalBMI();
 
 		double avg = team.calculateAverageMHR();
 		System.out.println("\nAverage Max Heart Rate: " + avg);
 
-		System.out.println("========== Team Analysis ==========");
 		team.displayAthletesAboveAverageMHR(avg);
 		team.displayHighestMHR();
 		team.displaySmallestLargestHeight();
@@ -277,7 +278,6 @@ class Team
 		{
 			System.out.println("No athletes outside of normal range");
 		}
-		System.out.print("\n");
 	}
 
 	/**
@@ -342,7 +342,7 @@ class Team
 	{
 		int index = calculateHighestMHRIndex();
 		// prints the name and MHR of the person with the highestMHR
-		System.out.println("Higehst Max Heart Rate: \n" + athletes[index].getName() + ": "
+		System.out.println("\nHighest Max Heart Rate: \n" + athletes[index].getName() + ": "
 				+ athletes[index].calculateMHR() + "\n");
 	}
 
@@ -383,15 +383,13 @@ class Team
 		System.out.println("Shortest Athlete: \n" + athletes[calculateSmallestHeightIndex()].getName() + " - "
 				+ athletes[calculateSmallestHeightIndex()].getHeight());
 		System.out.println("Tallest Athlete: \n" + athletes[calculateLargestHeightIndex()].getName() + " - "
-				+ athletes[calculateLargestHeightIndex()].getHeight());
+				+ athletes[calculateLargestHeightIndex()].getHeight() + "\n");
 	}
 
 	public void writeAthletesToFile(String fileName) throws FileNotFoundException
 	{
 		{
 			File fileReference = new File(fileName);
-
-			System.out.println(fileReference.getAbsolutePath());
 
 			PrintWriter write = new PrintWriter(fileReference);
 
@@ -403,6 +401,8 @@ class Team
 			}
 
 			write.close();
+
+			System.out.print("Results written to file: " + fileReference.getAbsolutePath());
 		}
 	}
 }
