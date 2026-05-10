@@ -35,7 +35,7 @@ public class ProjectIteration02
 		{
 			System.out.println("Testing file: " + fileName);
 
-			Team team = new Team("Nuggets", 6);
+			Team team = new Team("Nuggets", 3);
 
 			teamSetUp(fileName, team);
 
@@ -260,15 +260,12 @@ class Team
 	 */
 	public void addAthlete(Athlete athlete)
 	{
-		if (numberOfAthletes < athleteCount)
+		if (numberOfAthletes > athleteCount)
 		{
-			this.athletes[numberOfAthletes] = athlete;
-			++numberOfAthletes;
-		} else
-		{
-
+			numberOfAthletes = 0;
 		}
-		// add error message if full
+		this.athletes[numberOfAthletes] = athlete;
+		++numberOfAthletes;
 	}
 
 	/**
