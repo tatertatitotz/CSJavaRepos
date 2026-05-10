@@ -35,7 +35,7 @@ public class ProjectIteration02
 		{
 			System.out.println("Testing file: " + fileName);
 
-			Team team = new Team("Nuggets", 6);
+			Team team = new Team("Nuggets", 3);
 
 			teamSetUp(fileName, team);
 
@@ -266,9 +266,8 @@ class Team
 			++numberOfAthletes;
 		} else
 		{
-
+			System.out.print("Team is full.");
 		}
-		// add error message if full
 	}
 
 	/**
