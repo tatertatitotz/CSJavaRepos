@@ -226,7 +226,7 @@ class Team
 	private String name;
 	private Athlete[] athletes;
 	private int athleteCount;
-	private static int numberOfAthletes = 0;
+	private int numberOfAthletes = 0;
 
 	public Team(String name, int athleteCount)
 	{
@@ -260,12 +260,15 @@ class Team
 	 */
 	public void addAthlete(Athlete athlete)
 	{
-		if (numberOfAthletes > athleteCount)
+		if (numberOfAthletes < athleteCount)
 		{
-			numberOfAthletes = 0;
+			this.athletes[numberOfAthletes] = athlete;
+			++numberOfAthletes;
+		} else
+		{
+
 		}
-		this.athletes[numberOfAthletes] = athlete;
-		++numberOfAthletes;
+		// add error message if full
 	}
 
 	/**
