@@ -1,20 +1,20 @@
 Name: Team CS
-BMI: 20.0
+BMI: 21.630769230769232
 Category: Normal
 MHR: 201.0
 
 Name: Team CS
-BMI: 20.0
-Category: Normal
+BMI: 25.824489795918367
+Category: Overweight
 MHR: 200.0
 
 Name: Team CS
-BMI: 20.0
-Category: Normal
+BMI: 30.68042055147788
+Category: Overweight
 MHR: 185.0
 
 Name: Team CS
-BMI: 20.0
-Category: Normal
+BMI: 15.781632653061225
+Category: Underweight
 MHR: 195.0
 

@@ -1,10 +1,15 @@
 Name: Nuggets
-BMI: 20.0
-Category: Normal
+BMI: 42.90771484375
+Category: Obese
 MHR: 161.0
 
 Name: Nuggets
-BMI: 20.0
-Category: Normal
+BMI: 246.05
+Category: Obese
 MHR: 200.0
+
+Name: Nuggets
+BMI: NaN
+Category: Underweight
+MHR: 220.0
 

@@ -87,7 +87,7 @@ public class ProjectIteration02
 		System.out.println("Total Athletes: " + team.getAthleteCount());
 		System.out.println();
 
-		team.displayAthleteResults();
+		// team.displayAthleteResults();
 
 		System.out.println("========== Team Analysis ==========");
 		team.displayAthletesOutsideNormalBMI();
@@ -271,13 +271,13 @@ class Team
 	/**
 	 * Displays each athlete's stats: Name, BMI, Category, MHR
 	 */
-	public void displayAthleteResults()
-	{
-		for (int count = 0; count < athletes.length; ++count)
-		{
-			athletes[count].displayAthleteAnalysis();
-		}
-	}
+//	public void displayAthleteResults()
+//	{
+//		for (int count = 0; count < athletes.length; ++count)
+//		{
+//			athletes[count].displayAthleteAnalysis();
+//		}
+//	}
 
 	/**
 	 * Displays the names of the athletes who are not within normal bmi range.
