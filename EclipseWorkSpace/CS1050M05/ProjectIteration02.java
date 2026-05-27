@@ -67,6 +67,22 @@ public class ProjectIteration02
 		System.out.println("\nEnd of program");
 	}
 
+	public static int createTeamSize(String fileNameSize) throws FileNotFoundException
+	{
+		int teamSize = 0;
+		File fileReference = new File(fileNameSize);
+
+		Scanner reader = new Scanner(fileReference);
+		while (reader.hasNext())
+		{
+			if (reader.next() != null)
+			{
+				++teamSize;
+			}
+		}
+		return teamSize;
+	}
+
 	public static void teamSetUp(String fileName, Team team) throws FileNotFoundException
 	{
 		File fileReference = new File(fileName);
@@ -88,6 +104,7 @@ public class ProjectIteration02
 		System.out.println();
 
 		team.displayAthleteResults();
+		// team.displayAthleteResults();
 
 		System.out.println("========== Team Analysis ==========");
 		team.displayAthletesOutsideNormalBMI();
@@ -260,7 +277,7 @@ class Team
 	 */
 	public void addAthlete(Athlete athlete)
 	{
-		if (numberOfAthletes < athleteCount)
+		if (numberOfAthletes > athleteCount)
 		{
 			this.athletes[numberOfAthletes] = athlete;
 			++numberOfAthletes;
@@ -268,6 +285,10 @@ class Team
 		{
 			System.out.print("Team is full.");
 		}
+			numberOfAthletes = 0;
+		}
+		this.athletes[numberOfAthletes] = athlete;
+		++numberOfAthletes;
 	}
 
 	/**
@@ -280,6 +301,13 @@ class Team
 			athletes[count].displayAthleteAnalysis();
 		}
 	}
+//	public void displayAthleteResults()
+//	{
+//		for (int count = 0; count < athletes.length; ++count)
+//		{
+//			athletes[count].displayAthleteAnalysis();
+//		}
+//	}
 
 	/**
 	 * Displays the names of the athletes who are not within normal bmi range.

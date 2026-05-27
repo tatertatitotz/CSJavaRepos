@@ -8,3 +8,8 @@ BMI: 246.05
 Category: Obese
 MHR: 200.0
 
+Name: Nuggets
+BMI: NaN
+Category: Underweight
+MHR: 220.0
+
