@@ -103,7 +103,6 @@ public class ProjectIteration02
 		System.out.println("Total Athletes: " + team.getAthleteCount());
 		System.out.println();
 
-		team.displayAthleteResults();
 		// team.displayAthleteResults();
 
 		System.out.println("========== Team Analysis ==========");
@@ -279,28 +278,24 @@ class Team
 	{
 		if (numberOfAthletes > athleteCount)
 		{
+<<<<<<< HEAD
 			this.athletes[numberOfAthletes] = athlete;
 			++numberOfAthletes;
 		} else
 		{
 			System.out.print("Team is full.");
 		}
+=======
 			numberOfAthletes = 0;
 		}
 		this.athletes[numberOfAthletes] = athlete;
 		++numberOfAthletes;
+>>>>>>> feature
 	}
 
 	/**
 	 * Displays each athlete's stats: Name, BMI, Category, MHR
 	 */
-	public void displayAthleteResults()
-	{
-		for (int count = 0; count < athletes.length; ++count)
-		{
-			athletes[count].displayAthleteAnalysis();
-		}
-	}
 //	public void displayAthleteResults()
 //	{
 //		for (int count = 0; count < athletes.length; ++count)
