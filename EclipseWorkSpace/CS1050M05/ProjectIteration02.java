@@ -67,6 +67,22 @@ public class ProjectIteration02
 		System.out.println("\nEnd of program");
 	}
 
+	public static int createTeamSize(String fileNameSize) throws FileNotFoundException
+	{
+		int teamSize = 0;
+		File fileReference = new File(fileNameSize);
+
+		Scanner reader = new Scanner(fileReference);
+		while (reader.hasNext())
+		{
+			if (reader.next() != null)
+			{
+				++teamSize;
+			}
+		}
+		return teamSize;
+	}
+
 	public static void teamSetUp(String fileName, Team team) throws FileNotFoundException
 	{
 		File fileReference = new File(fileName);
