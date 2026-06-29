@@ -35,7 +35,7 @@ public class ProjectIteration02
 		{
 			System.out.println("Testing file: " + fileName);
 
-			Team team = new Team("Nuggets", 3);
+			Team team = new Team("Nuggets", createTeamSize(fileName));
 
 			teamSetUp(fileName, team);
 
@@ -53,7 +53,7 @@ public class ProjectIteration02
 		{
 			System.out.println("\nTesting file: " + fileName);
 
-			Team team = new Team("Team CS", 4);
+			Team team = new Team("Team CS", createTeamSize(fileName));
 
 			teamSetUp(fileName, team);
 
@@ -75,12 +75,54 @@ public class ProjectIteration02
 		Scanner reader = new Scanner(fileReference);
 		while (reader.hasNext())
 		{
-			if (reader.next() != null)
+			if (validEntry(fileNameSize) == true)
 			{
 				++teamSize;
 			}
 		}
 		return teamSize;
+	}
+
+	public static boolean validEntry(String fileName) throws FileNotFoundException
+	{
+		boolean valid = true;
+		File fileReference = new File(fileName);
+
+		Scanner reader = new Scanner(fileReference);
+		while (valid == true)
+		{
+			if (reader.next().length() < 1)
+			{
+				for (int count = 2; count == 0; --count)
+				{
+					if (reader.hasNextDouble() == true)
+					{
+						reader.nextDouble();
+					} else
+					{
+						System.out.print("Not a number");
+						// temporary until writer method implemented
+						break;
+					}
+				}
+				if (reader.hasNextInt() == true)
+				{
+					valid = true;
+				} else
+				{
+					System.out.print("Not a valid age");
+					valid = false;
+					break;
+				}
+			} else
+			{
+				System.out.print("Not a Name");
+				// temporary until writer method implemented
+				reader.close();
+				break;
+			}
+		}
+		return valid;
 	}
 
 	public static void teamSetUp(String fileName, Team team) throws FileNotFoundException
@@ -278,31 +320,24 @@ class Team
 	{
 		if (numberOfAthletes > athleteCount)
 		{
-<<<<<<< HEAD
 			this.athletes[numberOfAthletes] = athlete;
 			++numberOfAthletes;
 		} else
 		{
 			System.out.print("Team is full.");
 		}
-=======
-			numberOfAthletes = 0;
-		}
-		this.athletes[numberOfAthletes] = athlete;
-		++numberOfAthletes;
->>>>>>> feature
 	}
 
 	/**
 	 * Displays each athlete's stats: Name, BMI, Category, MHR
 	 */
-//	public void displayAthleteResults()
-//	{
-//		for (int count = 0; count < athletes.length; ++count)
-//		{
-//			athletes[count].displayAthleteAnalysis();
-//		}
-//	}
+	public void displayAthleteResults()
+	{
+		for (int count = 0; count < athletes.length; ++count)
+		{
+			athletes[count].displayAthleteAnalysis();
+		}
+	}
 
 	/**
 	 * Displays the names of the athletes who are not within normal bmi range.
