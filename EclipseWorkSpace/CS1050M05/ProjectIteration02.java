@@ -102,23 +102,21 @@ public class ProjectIteration02
 					{
 						System.out.print("Not a number");
 						// temporary until writer method implemented
+						valid = false;
 						break;
 					}
 				}
-				if (reader.hasNextInt() == true)
+				if (reader.hasNextInt() == false)
 				{
-					valid = true;
-				} else
-				{
-					System.out.print("Not a valid age");
+					System.out.println("Not a valid age");
 					valid = false;
 					break;
 				}
 			} else
 			{
-				System.out.print("Not a Name");
+				System.out.println("Not a Name");
 				// temporary until writer method implemented
-				reader.close();
+				valid = false;
 				break;
 			}
 		}
